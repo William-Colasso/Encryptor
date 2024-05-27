@@ -1,11 +1,11 @@
 body{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 10;
 
     .container {
         text-align: center;
@@ -15,18 +15,34 @@ body{
         color: #1ccc33;
     }
 
-    #botao {
+    #botao1 {
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
         background-color: #000000;
-        color: #1ccc33;
-        border: none;
-        border-radius: 5px;
+        color: #12a525;
+        border: 2px solid #323b32; /* Adiciona uma borda azul escura */
+        border-radius: 5px; /* Bordas arredondadas */
+        transition: background-color 0.3s;
+    }
+
+    #botao2 {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #000000;
+        color: #12a525;
+        border: 2px solid #323b32; /* Adiciona uma borda azul escura */
+        border-radius: 5px; /* Bordas arredondadas */
         transition: background-color 0.3s;
     }
     
-    #botao:hover {
-        background-color: #0056b3;
+    #botao1:hover {
+        background-color: #12a525;
+        color: #000000;
+    }
+    #botao2:hover {
+        background-color: #12a525;
+        color: #000000;
     }
 }
