@@ -1,51 +1,54 @@
-body{
+body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 10;
+    margin: 0; /* Corrigido para zero */
+}
 
-    .container {
-        text-align: center;
-    }
-    .figura{
-        color: aliceblue;
-        background-color: azure;
-        position: absolute;
-        font-size: 20px;
-        animation: mover 5s linear infinite alternate;
-    }
-    @keyframes mover {
-        0% {
-            left: 0;
-        }
-        50% {
-            left: calc(100% - 48px); /* Largura do símbolo */
-        }
-        100% {
-            left: 0;
-        }
-    }
-    #titulo {
-        color: #1ccc33;
-    }
+.container {
+    text-align: center;
+}
 
-    #botao1, #botao2 {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        background-color: #000000;
-        color: #12a525;
-        border: 2px solid #323b32; 
-        border-radius: 5px; 
-        transition: background-color 0.3s;
-        margin: 5px; 
+.figura, .figura2 {
+    color: rgb(24, 184, 37);
+    background-color: rgb(10, 105, 38);
+    position: absolute;
+    font-size: 20px;
+    animation: mover 20s linear infinite alternate;
+}
+
+@keyframes mover {
+    0% {
+        left: 0;
     }
-    
-    #botao1:hover, #botao2:hover {
-        background-color: #12a525;
-        color: #000000;
+    50% {
+        left: calc(100% - 48px); /* Largura do símbolo */
     }
+    100% {
+        left: 0;
+    }
+}
+
+#titulo {
+    color: #1ccc33;
+}
+
+#botao1, #botao2 {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #000000;
+    color: #12a525;
+    border: 2px solid #323b32; /* Adiciona uma borda verde escura */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s;
+    margin: 5px; /* Adicionando margem para separar os botões */
+}
+
+#botao1:hover, #botao2:hover {
+    background-color: #12a525;
+    color: #000000;
 }
