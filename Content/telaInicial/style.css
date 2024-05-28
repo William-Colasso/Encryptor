@@ -18,16 +18,16 @@ body {
 }
 
 #titulo {
-    font-family: Pixel;
+    font-family: Pixel; /*Definição da Fonte*/
     color: #1ccc33;
 }
 
 .botoes {
-    text-decoration: none;
-    font-family: Pixel;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+    text-decoration: none;/*Tirando o Sublinado dos botões*/
+    font-family: Pixel; /*Fonte Pixel exportada e definida*/
+    padding: 10px 20px; /*Avançar as bordas*/
+    font-size: 16px;/*Aumentar tamanho da fonte*/
+    cursor: pointer;/*Tipo de ponteiro que irá aparacer quando estiver com o mouse em cima*/
     background-color: #000000;
     color: #12a525;
     border: 2px solid #323b32; /* Adiciona uma borda verde escura */
@@ -36,7 +36,7 @@ body {
     margin: 5px; /* Adicionando margem para separar os botões */
 }
 
-#botao1:hover, #botao2:hover {
+.botoes:hover {
     background-color: #12a525;
     color: #000000;
 }
