@@ -12,31 +12,18 @@ body {
     text-align: center;
 }
 
-.figura, .figura2 {
-    color: rgb(24, 184, 37);
-    background-color: rgb(10, 105, 38);
-    position: absolute;
-    font-size: 20px;
-    animation: mover 20s linear infinite alternate;
-}
-
-@keyframes mover {
-    0% {
-        left: 0;
-    }
-    50% {
-        left: calc(100% - 48px); /* Largura do símbolo */
-    }
-    100% {
-        left: 0;
-    }
+@font-face {
+    font-family: Pixel;
+    src: url(Pixeled.ttf);
 }
 
 #titulo {
+    font-family: Pixel;
     color: #1ccc33;
 }
 
 #botao1, #botao2 {
+    font-family: Pixel;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
