@@ -19,5 +19,39 @@ body{
 }
 
 .seletor label {
+    display: block;
     margin-bottom: 10px;
+}
+
+.seletor label input[type="checkbox"] {
+    /* Oculta a caixa de seleção padrão */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Define o tamanho da caixa de seleção */
+    width: 20px;
+    height: 20px;
+    /* Define a cor de fundo da caixa de seleção */
+    background-color: #ffffff;
+    /* Adiciona uma borda à caixa de seleção */
+    border: 1px solid #999;
+
+    /* Adiciona um espaçamento interno para que o conteúdo não fique muito próximo da borda */
+    padding: 2px;
+}
+
+.seletor label input[type="checkbox"]:checked {
+    /* Define a cor de fundo da caixa de seleção quando clicada */
+   transition: 0.7s;
+    border-radius: 15px;
+    background-color: #00ff0d; /* Laranja, por exemplo */
+    
+}
+
+.seletor label input[type="checkbox"]:not(:checked) {
+    /* Define a cor de fundo da caixa de seleção quando clicada */
+   transition: 0.7s;
+    border-radius: 0px;
+    background-color: #ffffff; /* Laranja, por exemplo */
+    
 }
