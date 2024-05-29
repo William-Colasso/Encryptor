@@ -3,16 +3,21 @@ body{
     
 }
 
-.caixa-rolagem{
-    font-size: 20px;
-    margin-top: 60px;
-    margin-left: 25px;
+
+
+.scroll-selector {
+    font-size: 25px;
+    margin: 30px;
     color: white;
-    width: 375px;
+    width: 300px;
     height: 650px;
     border: 1px solid #ccc;
-    border-radius: 30px;
     padding: 10px;
-    overflow-y: scroll;
-    
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-selector label {
+    margin-bottom: 10px;
 }
