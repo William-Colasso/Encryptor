@@ -16,6 +16,7 @@ body{
     overflow-y: auto; /* Enable vertical scrolling */
     display: flex;
     flex-direction: column;
+
 }
 
 .seletor label {
@@ -38,6 +39,8 @@ body{
 
     /* Adiciona um espaçamento interno para que o conteúdo não fique muito próximo da borda */
     padding: 2px;
+
+    position: relative;
 }
 
 .seletor label input[type="checkbox"]:checked {
@@ -54,4 +57,18 @@ body{
     border-radius: 0px;
     background-color: #ffffff; /* Laranja, por exemplo */
     
+}
+
+.seletor label input[type="checkbox"]::before {
+    /* Conteúdo do símbolo (um "✔️") */
+    content: "\2714"; /* Código Unicode do símbolo de certo */
+    /* Posiciona o símbolo no centro da caixa de seleção */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Define a cor do símbolo */
+    color: #fff; /* Branco */
+    /* Define o tamanho do símbolo */
+    font-size: 16px; /* Tamanho do símbolo (ajuste conforme necessário) */
 }
