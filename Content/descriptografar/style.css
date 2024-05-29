@@ -34,7 +34,7 @@ body{
     /* Define a cor de fundo da caixa de seleção */
     background-color: #ffffff;
     /* Adiciona uma borda à caixa de seleção */
-    border: 0px solid #999;
+    
 
     /* Adiciona um espaçamento interno para que o conteúdo não fique muito próximo da borda */
     padding: 2px;
@@ -46,7 +46,7 @@ body{
     /* Define a cor de fundo da caixa de seleção quando clicada */
    transition: 0.7s;
     border-radius: 15px;
-    background-color: #00ff0d; /* Laranja, por exemplo */
+    background-color: #008a07; /* Laranja, por exemplo */
     
 }
 
@@ -67,7 +67,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     /* Define a cor do símbolo */
-    color: #fff; /* Branco */
+    color: #ffffff; /* Branco */
     /* Define o tamanho do símbolo */
     font-size: 16px; /* Tamanho do símbolo (ajuste conforme necessário) */
 }
