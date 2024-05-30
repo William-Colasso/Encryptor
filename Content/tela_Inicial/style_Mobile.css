@@ -42,3 +42,10 @@ body {
 }
 
 
+#botao1{
+    position: relative;
+}
+#botao2{
+    position: absolute;
+    top: 30px;
+}
