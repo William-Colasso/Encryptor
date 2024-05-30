@@ -20,7 +20,7 @@ body{
 
 .seletor label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .seletor label input[type="checkbox"] {
