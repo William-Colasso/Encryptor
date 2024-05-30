@@ -43,11 +43,11 @@ body {
 }
 
 #botao1 {
-    position: relative;
+    position: absolute;
 }
 
 #botao2 {
-    position: absolute;
-    top: 65%; 
-    left: 41.05%; 
+    position: relative;
+    top: 100px; 
+    left: 0%; 
 }
