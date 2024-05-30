@@ -37,18 +37,17 @@ body {
     margin: 5px; /* Adicionando margem para separar os botões */
 }
 
-.botoes:hover {
+.botoes a:hover {
     background-color: #12a525;
     color: #000000;
 }
 
-
-
-#botao1{
+#botao1 {
     position: relative;
 }
-#botao2{
+
+#botao2 {
     position: absolute;
-    top: 500px;
-    left: 68px;
-} 
+    top: 70px; 
+    left: 0px; 
+}
