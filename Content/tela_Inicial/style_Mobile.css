@@ -18,6 +18,7 @@ body {
 }
 
 #titulo {
+    top: 200px;
     font-family: Pixel; /*Definição da Fonte*/
     color: #1ccc33;
 }
@@ -49,5 +50,5 @@ body {
 #botao2{
     position: absolute;
     top: 500px;
-    left: 75px;
+    left: 68px;
 } 
