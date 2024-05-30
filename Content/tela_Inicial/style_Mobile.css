@@ -37,7 +37,7 @@ body {
     margin: 5px; /* Adicionando margem para separar os botões */
 }
 
-.botoes a:hover {
+.botoes:hover {
     background-color: #12a525;
     color: #000000;
 }
@@ -48,6 +48,6 @@ body {
 
 #botao2 {
     position: absolute;
-    top: 70px; 
-    left: 0px; 
+    top: 65%; 
+    left: 41.05%; 
 }
