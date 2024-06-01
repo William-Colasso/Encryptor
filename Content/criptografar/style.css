@@ -2,9 +2,6 @@ body{
     background-color: black;
     
 }
-
-
-
 .seletor {
     font-size: 25px;
     margin: 30px;
@@ -68,7 +65,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     /* Define a cor do símbolo */
-    color: #ffffff; /* Branco */
+    color: #ffffff; 
     /* Define o tamanho do símbolo */
-    font-size: 16px; /* Tamanho do símbolo (ajuste conforme necessário) */
+    font-size: 16px; 
 }
