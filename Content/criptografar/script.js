@@ -1,14 +1,18 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const checkboxes = document.querySelectorAll('.scroll-selector input[type="checkbox"]');
+var chackboxes = document.getElementsByClassName('criptografia')
 
-    checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener('change', (event) => {
-            const metodo = event.target.value;
-            if (event.target.checked) {
-                alert(`Método: ${metodo}`);
-            } else {
-                
-            }
-        });
-    });
-});
+const text_voltar = document.getElementById('voltar')
+
+text_voltar.addEventListener('mouseenter', function(){
+    text_voltar.style.transition = '0.2s'
+    text_voltar.textContent ='V0!7@r'
+
+
+
+})
+
+text_voltar.addEventListener('mouseout', function(){
+    text_voltar.style.transition = '0.3s'
+    text_voltar.textContent ='Voltar'
+
+})
+
