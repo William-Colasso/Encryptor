@@ -1,12 +1,12 @@
 
 var aes = document.getElementById('aes')
 var blow_f = document.getElementById('blowfish')
+var codigo_binario = document.getElementById('codigo-binario')
 
 
 
 
-
-
+  
 
 
 
