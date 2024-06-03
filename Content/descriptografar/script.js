@@ -1,4 +1,8 @@
-var chackboxes = document.getElementsByClassName('criptografia')
+var checkboxes = document.getElementsByName('criptografia')
+
+if(checkboxes[0].checked){
+    alert('primeiro clicado')
+}
 
 const text_voltar = document.getElementById('voltar')
 
