@@ -1,4 +1,4 @@
-var chackboxes = document.getElementsByClassName('criptografia')
+var checkboxes = document.getElementsByClassName('criptografia')
 
 const text_voltar = document.getElementById('voltar')
 
@@ -16,3 +16,6 @@ text_voltar.addEventListener('mouseout', function(){
 
 })
 
+    if(checkboxes[0].checked){
+        alert('primeiro clicado')
+    }
