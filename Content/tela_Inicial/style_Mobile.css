@@ -18,6 +18,7 @@ body {
 }
 
 #titulo {
+    top: 200px;
     font-family: Pixel; /*Definição da Fonte*/
     color: #1ccc33;
 }
@@ -30,7 +31,7 @@ body {
     cursor: pointer;/*Tipo de ponteiro que irá aparacer quando estiver com o mouse em cima*/
     background-color: #000000;
     color: #12a525;
-    border: 2px solid #323b32; /* Adiciona uma borda verde escura */
+    border: 2px solid #12521b; /* Adiciona uma borda verde escura */
     border-radius: 5px; /* Bordas arredondadas */
     transition: background-color 0.3s;
     margin: 5px; /* Adicionando margem para separar os botões */
@@ -39,4 +40,14 @@ body {
 .botoes:hover {
     background-color: #12a525;
     color: #000000;
+}
+
+#botao1 {
+    position: absolute;
+}
+
+#botao2 {
+    position: relative;
+    top: 100px; 
+    left: 0%; 
 }
