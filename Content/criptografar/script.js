@@ -1,25 +1,13 @@
-var fcript = document.getElementsByName('criptografia')
-var element = document.getElementById('aes')
-var fcripto = document.getElementsByClassName('seletor')
+
+var aes = document.getElementById('aes')
+var blow_f = document.getElementById('blowfish')
 
 
 
-function testar(){
-    if(fcript[0].checked){
-        alert('Olá')
-    }
-    if(element.checked){
-        alert('teste')
-    }
 
-    if(fcripto[0].checked){
-        alert('teste')
-    }
-    else{
-        alert('nao foi')
-    }
 
-}
+
+
 
 
 
