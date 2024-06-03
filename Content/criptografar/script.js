@@ -1,8 +1,27 @@
-var checkboxes = document.getElementsByName('criptografia')
+var fcript = document.getElementsByName('criptografia')
+var element = document.getElementById('aes')
+var fcripto = document.getElementsByClassName('seletor')
 
-if(checkboxes[0].checked){
-    alert('primeiro clicado')
+
+
+function testar(){
+    if(fcript[0].checked){
+        alert('Olá')
+    }
+    if(element.checked){
+        alert('teste')
+    }
+
+    if(fcripto[0].checked){
+        alert('teste')
+    }
+    else{
+        alert('nao foi')
+    }
+
 }
+
+
 
 const text_voltar = document.getElementById('voltar')
 
