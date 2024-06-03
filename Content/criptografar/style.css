@@ -47,7 +47,7 @@ body::-webkit-scrollbar{
     cursor: pointer;
 }
 
-.seletor label input[type="checkbox"] {
+.seletor label input[type="radio"] {
     /* Oculta a caixa de seleção padrão */
     appearance: none;
     -webkit-appearance: none;
@@ -65,7 +65,7 @@ body::-webkit-scrollbar{
     top: 3px;
 }
 
-.seletor label input[type="checkbox"]:checked {
+.seletor label input[type="radio"]:checked {
     /* Define a cor de fundo da caixa de seleção quando clicada */
    transition: 0.4s;
    border-radius: 15px;
@@ -73,15 +73,19 @@ body::-webkit-scrollbar{
     
 }
 
-.seletor label input[type="checkbox"]:not(:checked) {
+.seletor label input[type="radio"]:not(:checked) {
+    transition: 2s;
+   border-radius: 15px;
+    background-color: #e70303; 
     /* Define a cor de fundo da caixa de seleção quando clicada */
-   transition: 0.2s;
+    transition: 0.2s;
     /*Transição de cores e forma depois que clicado*/
+    border-radius: 0px;
     background-color: #ffffff; 
     
 }
 
-.seletor label input[type="checkbox"]::after {
+.seletor label input[type="radio"]::after {
     /* Conteúdo do símbolo (um "✔️") */
     content: "\2714"; /* Código Unicode do símbolo de certo */
     /* Posiciona o símbolo no centro da caixa de seleção */
