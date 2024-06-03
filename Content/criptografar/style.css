@@ -74,11 +74,8 @@ body::-webkit-scrollbar{
 }
 
 .seletor label input[type="radio"]:not(:checked) {
-    transition: 2s;
-   border-radius: 15px;
-    background-color: #e70303; 
-    /* Define a cor de fundo da caixa de seleção quando clicada */
-    transition: 0.2s;
+
+    transition: 1.5s;
     /*Transição de cores e forma depois que clicado*/
     border-radius: 0px;
     background-color: #ffffff; 
