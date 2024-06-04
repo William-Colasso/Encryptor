@@ -1,4 +1,4 @@
-# 🛡️ Encryptator
+# 🛡️ Encryptor
 
 ## Descrição
 Encryptator é uma aplicação web para criptografia básica. Ele oferece uma interface interativa para criptografar e descriptografar mensagens.
