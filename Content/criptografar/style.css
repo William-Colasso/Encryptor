@@ -132,7 +132,8 @@ body::-webkit-scrollbar{
 }
 
 #cript:hover{
-
+    background-color: #12a525;
+    color: black;
 }
 
 /*William Colasso Pereira*/
