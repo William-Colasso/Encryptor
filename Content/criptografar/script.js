@@ -23,11 +23,6 @@ var sha3 = document.getElementById('sha3')
 var _3des = document.getElementById('3des')
 
 
-  
-
-
-
-
 const text_voltar = document.getElementById('voltar')
 
 text_voltar.addEventListener('mouseenter', function(){
@@ -44,3 +39,14 @@ text_voltar.addEventListener('mouseout', function(){
 
 })
 
+function morse(){
+    var teste = "Ola"
+    var tam = teste.length
+    var char = []
+    if(codigo_morse.checked){
+        for(let i = 0; i < tam; i++){
+            char[i] = teste[i]
+            console.log(char[i])
+        }
+    }
+}
