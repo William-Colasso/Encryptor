@@ -11,7 +11,7 @@
     <a id="voltar" href="../../index.html">Voltar</a>
     
     <div class="seletor">
-        <label><input type="radio" name="criptografia" id="aes" > AES </label>
+        <label><input type="radio" name="criptografia" id="aes" checked> AES </label>
         <label><input type="radio" name="criptografia" id="blowfish"> Blowfish</label>
         <label><input type="radio" name="criptografia" id="codigo-binario"> Código Binário</label>
         <label><input type="radio" name="criptografia" id="codigo-morse"> Código Morse</label>
@@ -35,6 +35,7 @@
         <label><input type="radio" name="criptografia" id="3des"> 3DES</label>
     </div>
     <div class="falso_flow" id="overflow_container">
+        <label><input type="radio" name="numbers" id="1" checked>1</label>
         <label><input type="radio" name="numbers" id="2">2</label>
         <label><input type="radio" name="numbers" id="3">3</label>
         <label><input type="radio" name="numbers" id="4">4</label>
@@ -59,7 +60,13 @@
         <label><input type="radio" name="numbers" id="23">23</label>
         <label><input type="radio" name="numbers" id="24">24</label>
         <label><input type="radio" name="numbers" id="25">25</label>
-        <label><input type="radio" name="numbers" id="26">26</label>
+    </div>
+    <div>
+        <label id="prompt">
+            <input type="text" name="prompt" id="prompt_entrada">
+        </label>
+
+
     </div>
     <button id="cript" onclick="teste()">Encriptar</button>
    <script src="script.js"></script>

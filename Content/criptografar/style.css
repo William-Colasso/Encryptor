@@ -178,4 +178,17 @@ body::-webkit-scrollbar{
 }
 
 
+
+#prompt_entrada{
+    background-color: white;
+    position: relative;
+    top: 10vh;
+    left: 50vw;
+    width: 47vw;
+    height: 35vh;
+    font-size: large;
+    border: solid black;
+    box-shadow: white 20px;
+}
+
 /*William Colasso Pereira*/
