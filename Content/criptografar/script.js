@@ -50,3 +50,15 @@ function morse(){
         }
     }
 }
+
+setInterval(() => {
+    const elementoEscondido = document.getElementById('overflow_container');
+    if(cifra_cesar.checked){
+        elementoEscondido.classList.remove('falso_flow');
+        elementoEscondido.classList.add('segundo_flow');
+    }
+    else{
+        elementoEscondido.classList.remove('segundo_flow');
+        elementoEscondido.classList.add('falso_flow');
+    }
+  }, 500);

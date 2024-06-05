@@ -13,9 +13,10 @@ body::-webkit-scrollbar{
     margin: 120px 30px;
     color: white;                                   /*Definições gerais da Classe*/
     width: 20vw;
-    height: 80vh ;
+    height: 70vh ;
+    top: 40px;
     border: 1px solid #202020;
-
+    position: absolute;
     padding: 10px;
     
     overflow-y: scroll; /* Enable vertical scrolling */
@@ -121,19 +122,60 @@ body::-webkit-scrollbar{
 
 #cript{
     position: absolute;
-    padding: 40px;
+    padding: 20px 100px;
     left: 70vw;
     top: 50vh;
     cursor: pointer;
-    border: solid #323b32 1px;
+    border: solid #323b32 2px;
     font-family: Pixel;
     background-color: rgb(0, 0, 0);
     color: #12a525;
+    border-radius: 15px ;
 }
 
 #cript:hover{
-    background-color: #12a525;
+    transition: 0.2s;
+    background-color: #187514;
     color: black;
+
 }
+#cript:active{
+    transition: 0.10s;
+    background-color: black;
+    color: white;
+    color: #12a525;
+}
+.falso_flow{
+    display: none;
+}
+.segundo_flow{
+    font-size: 30px;
+    margin: 120px 20px;
+    color: white;
+    top: 40px;                                   /*Definições gerais da Classe*/
+    width: 20vw;
+    height: 70vh ;
+    border: 1px solid #202020;
+    position: relative;
+    padding: 10px;
+    left: 350px;
+
+    overflow-y: scroll; /* Enable vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.segundo_flow::-webkit-scrollbar {
+    background-color: rgb(0, 0, 0);
+                 /*Desativar parte visual da  barra de rolagem*/
+}
+.segundo_flow::-webkit-scrollbar-thumb {
+    background-color: rgb(19, 18, 18);
+    border-radius: 10px;
+    
+                 /*Desativar parte visual da  barra de rolagem*/
+}
+
 
 /*William Colasso Pereira*/
