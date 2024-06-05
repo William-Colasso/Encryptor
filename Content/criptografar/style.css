@@ -158,9 +158,9 @@ body::-webkit-scrollbar{
     border: 1px solid #202020;
     position: relative;
     padding: 10px;
-    left: 21vw;
+    left: 23vw;
 
-    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-y: scroll; /* Ativar rolagem vertical */
     display: flex;
     flex-direction: column;
     
