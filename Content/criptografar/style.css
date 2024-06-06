@@ -146,19 +146,19 @@ body::-webkit-scrollbar{
     color: #12a525;
 }
 .falso_flow{
-    display: none;
+    visibility: hidden;
 }
 .segundo_flow{
     font-size: 30px;
     margin: 120px 20px;
     color: white;
     top: 40px;                                   /*Definições gerais da Classe*/
-    width: 20vw;
+    width: 15vw;
     height: 70vh ;
     border: 1px solid #202020;
-    position: relative;
+    position: absolute;
     padding: 10px;
-    left: 23vw;
+    left: 21vw;
 
     overflow-y: scroll; /* Ativar rolagem vertical */
     display: flex;
@@ -184,8 +184,8 @@ body::-webkit-scrollbar{
     position: relative;
     top: 10vh;
     left: 50vw;
-    width: 47vw;
-    height: 35vh;
+    width: 45vw;
+    height: 30vh;
     font-size: large;
     border: solid black;
     box-shadow: white 20px;
