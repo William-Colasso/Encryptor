@@ -187,7 +187,7 @@ body::-webkit-scrollbar{
     width: 45vw;
     height: 30vh;
     font-size: large;
-    border: solid black;
+    border: solid black 1px;
     box-shadow: white 20px;
 }
 
