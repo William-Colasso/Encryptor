@@ -6,6 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0; /* Corrigido para zero */
+    user-select: none;
 }
 
 .container {

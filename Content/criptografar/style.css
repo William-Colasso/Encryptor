@@ -2,6 +2,7 @@ body{
     background-color: black;
     /*Caracteristicas gerais*/
     user-select: none;
+    
 
 }
 body::-webkit-scrollbar{
