@@ -11,29 +11,68 @@
     <a id="voltar" href="../../index.html">Voltar</a>
     
     <div class="seletor">
-        <label><input type="radio" name="criptografia" value="aes"> AES </label>
-        <label><input type="radio" name="criptografia" value="blowfish"> Blowfish</label>
-        <label><input type="radio" name="criptografia" value="codigo-binario"> Código Binário</label>
-        <label><input type="radio" name="criptografia" value="codigo-morse"> Código Morse</label>
-        <label><input type="radio" name="criptografia" value="cifra-cesar"> Cifra de César</label>
-        <label><input type="radio" name="criptografia" value="cifra-playfair"> Cifra de Playfair</label>
-        <label><input type="radio" name="criptografia" value="cifra-substituicao"> Cifra de Substituição</label>
-        <label><input type="radio" name="criptografia" value="cifra-transposicao"> Cifra de Transposição</label>
-        <label><input type="radio" name="criptografia" value="cifra-vigenere"> Cifra de Vigenère</label>
-        <label><input type="radio" name="criptografia" value="des"> DES </label>
-        <label><input type="radio" name="criptografia" value="diffie-hellman"> Diffie-Hellman</label>
-        <label><input type="radio" name="criptografia" value="dsa"> DSA </label>
-        <label><input type="radio" name="criptografia" value="elgamal"> ElGamal</label>
-        <label><input type="radio" name="criptografia" value="md5"> MD5 </label>
-        <label><input type="radio" name="criptografia" value="rc4"> RC4</label>
-        <label><input type="radio" name="criptografia" value="rsa"> RSA </label>
-        <label><input type="radio" name="criptografia" value="salsa20"> Salsa20</label>
-        <label><input type="radio" name="criptografia" value="serpent"> Serpent</label>
-        <label><input type="radio" name="criptografia" value="sha1"> SHA-1 </label>
-        <label><input type="radio" name="criptografia" value="sha2"> SHA-2 </label>
-        <label><input type="radio" name="criptografia" value="sha3"> SHA-3</label>
-        <label><input type="radio" name="criptografia" value="3des"> 3DES</label>
+        <label><input type="radio" name="criptografia" id="aes" checked> AES </label>
+        <label><input type="radio" name="criptografia" id="blowfish"> Blowfish</label>
+        <label><input type="radio" name="criptografia" id="codigo-binario"> Código Binário</label>
+        <label><input type="radio" name="criptografia" id="codigo-morse"> Código Morse</label>
+        <label><input type="radio" name="criptografia" id="cifra-cesar" > Cifra de César</label>
+        <label><input type="radio" name="criptografia" id="cifra-playfair"> Cifra de Playfair</label>
+        <label><input type="radio" name="criptografia" id="cifra-substituicao"> Cifra de Substituição</label>
+        <label><input type="radio" name="criptografia" id="cifra-transposicao"> Cifra de Transposição</label>
+        <label><input type="radio" name="criptografia" id="cifra-vigenere"> Cifra de Vigenère</label>
+        <label><input type="radio" name="criptografia" id="des"> DES </label>
+        <label><input type="radio" name="criptografia" id="diffie-hellman"> Diffie-Hellman</label>
+        <label><input type="radio" name="criptografia" id="dsa"> DSA </label>
+        <label><input type="radio" name="criptografia" id="elgamal"> ElGamal</label>
+        <label><input type="radio" name="criptografia" id="md5"> MD5 </label>
+        <label><input type="radio" name="criptografia" id="rc4"> RC4</label>
+        <label><input type="radio" name="criptografia" id="rsa"> RSA </label>
+        <label><input type="radio" name="criptografia" id="salsa20"> Salsa20</label>
+        <label><input type="radio" name="criptografia" id="serpent"> Serpent</label>
+        <label><input type="radio" name="criptografia" id="sha1"> SHA-1 </label>
+        <label><input type="radio" name="criptografia" id="sha2"> SHA-2 </label>
+        <label><input type="radio" name="criptografia" id="sha3"> SHA-3</label>
+        <label><input type="radio" name="criptografia" id="3des"> 3DES</label>
     </div>
-   <div><script src="script.js"></script></div>
+    <div class="falso_flow" id="overflow_container">
+        <label><input type="radio" name="numbers" id="1" checked>1</label>
+        <label><input type="radio" name="numbers" id="2">2</label>
+        <label><input type="radio" name="numbers" id="3">3</label>
+        <label><input type="radio" name="numbers" id="4">4</label>
+        <label><input type="radio" name="numbers" id="5">5</label>
+        <label><input type="radio" name="numbers" id="6">6</label>
+        <label><input type="radio" name="numbers" id="7">7</label>
+        <label><input type="radio" name="numbers" id="8">8</label>
+        <label><input type="radio" name="numbers" id="9">9</label>
+        <label><input type="radio" name="numbers" id="10">10</label>
+        <label><input type="radio" name="numbers" id="11">11</label>
+        <label><input type="radio" name="numbers" id="12">12</label>
+        <label><input type="radio" name="numbers" id="13">13</label>
+        <label><input type="radio" name="numbers" id="14">14</label>
+        <label><input type="radio" name="numbers" id="15">15</label>
+        <label><input type="radio" name="numbers" id="16">16</label>
+        <label><input type="radio" name="numbers" id="17">17</label>
+        <label><input type="radio" name="numbers" id="18">18</label>
+        <label><input type="radio" name="numbers" id="19">19</label>
+        <label><input type="radio" name="numbers" id="20">20</label>
+        <label><input type="radio" name="numbers" id="21">21</label>
+        <label><input type="radio" name="numbers" id="22">22</label>
+        <label><input type="radio" name="numbers" id="23">23</label>
+        <label><input type="radio" name="numbers" id="24">24</label>
+        <label><input type="radio" name="numbers" id="25">25</label>
+    </div>
+    <div>
+        <label id="prompt1" class="prompt">
+            <textarea  name="prompt" id="prompt_entrada"></textarea>
+            <p  name="prompt" id="prompt_saida">aqui</p>
+        </label>
+
+
+    </div>
+    <button id="cript" onclick="encriptar()">Decriptar</button>
+    
+   
 </body>
+<script src="script_Morse.js"></script>
+   <script src="script.js"></script>
 </html>

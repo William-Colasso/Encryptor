@@ -124,7 +124,7 @@ body::-webkit-scrollbar{
 #cript{
     position: absolute;
     padding: 20px 100px;
-    left: 70vw;
+    left: 65vw;
     top: 50vh;
     cursor: pointer;
     border: solid #323b32 2px;
@@ -183,13 +183,30 @@ body::-webkit-scrollbar{
 #prompt_entrada{
     background-color: white;
     position: relative;
-    top: 10vh;
-    left: 50vw;
-    width: 45vw;
+    top: 5vh;
+    left: 55vw;
+    width: 38vw;
     height: 30vh;
     font-size: large;
     border: solid black 1px;
     box-shadow: white 20px;
+    border: solid green;
+    border-radius: 2px;
+    
 }
+
+#prompt_saida{
+    background-color: white;
+    position: relative;
+    top: 25vh;
+    left: 55vw;
+    width: 38vw;
+    height: 30vh;
+    font-size: large;
+    border: solid black 1px;
+    box-shadow: white 20px;
+    user-select: text;
+}
+
 
 /*William Colasso Pereira*/

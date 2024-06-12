@@ -2,6 +2,7 @@ body{
     background-color: black;
     /*Caracteristicas gerais*/
     user-select: none;
+    
 
 }
 body::-webkit-scrollbar{
@@ -13,9 +14,10 @@ body::-webkit-scrollbar{
     margin: 120px 30px;
     color: white;                                   /*Definições gerais da Classe*/
     width: 20vw;
-    height: 80vh ;
+    height: 70vh ;
+    top: 40px;
     border: 1px solid #202020;
-
+    position: absolute;
     padding: 10px;
     
     overflow-y: scroll; /* Enable vertical scrolling */
@@ -118,5 +120,93 @@ body::-webkit-scrollbar{
     content: "V0lt@r";
     
 }
+
+#cript{
+    position: absolute;
+    padding: 20px 100px;
+    left: 65vw;
+    top: 50vh;
+    cursor: pointer;
+    border: solid #323b32 2px;
+    font-family: Pixel;
+    background-color: rgb(0, 0, 0);
+    color: #12a525;
+    border-radius: 15px ;
+}
+
+#cript:hover{
+    transition: 0.2s;
+    background-color: #187514;
+    color: black;
+
+}
+#cript:active{
+    transition: 0.10s;
+    background-color: black;
+    color: white;
+    color: #12a525;
+}
+.falso_flow{
+    visibility: hidden;
+}
+.segundo_flow{
+    font-size: 30px;
+    margin: 120px 20px;
+    color: white;
+    top: 40px;                                   /*Definições gerais da Classe*/
+    width: 15vw;
+    height: 70vh ;
+    border: 1px solid #202020;
+    position: absolute;
+    padding: 10px;
+    left: 21vw;
+
+    overflow-y: scroll; /* Ativar rolagem vertical */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.segundo_flow::-webkit-scrollbar {
+    background-color: rgb(0, 0, 0);
+                 /*Desativar parte visual da  barra de rolagem*/
+}
+.segundo_flow::-webkit-scrollbar-thumb {
+    background-color: rgb(19, 18, 18);
+    border-radius: 10px;
+    
+                 /*Desativar parte visual da  barra de rolagem*/
+}
+
+
+
+#prompt_entrada{
+    background-color: white;
+    position: relative;
+    top: 5vh;
+    left: 55vw;
+    width: 38vw;
+    height: 30vh;
+    font-size: large;
+    border: solid black 1px;
+    box-shadow: white 20px;
+    border: solid green;
+    border-radius: 2px;
+    
+}
+
+#prompt_saida{
+    background-color: white;
+    position: relative;
+    top: 25vh;
+    left: 55vw;
+    width: 38vw;
+    height: 30vh;
+    font-size: large;
+    border: solid black 1px;
+    box-shadow: white 20px;
+    user-select: text;
+}
+
 
 /*William Colasso Pereira*/
