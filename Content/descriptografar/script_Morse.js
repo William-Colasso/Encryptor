@@ -7,12 +7,20 @@ function encriptar() {
 
     }
 
-    function morse() {
-        var texto = ".--- .- ...- .- / .-. ..- .. --"
-        var fatiar = [""]
-        var tam = texto.length
-        var a = 0
+      function morse() {
+
+        var text1 = document.getElementById('prompt_entrada').value
+        var texto = String(text1)
+        var tam = parseInt(texto.length)
         var text = ""
+        var prompt_saida = document.getElementById('prompt_saida')
+        var a = 0
+
+
+        
+
+        var fatiar = [tam]
+
 
         for (let i = 0; i < tam; i++) {
             if (texto[i] != " ") {
@@ -142,7 +150,7 @@ function encriptar() {
         for (let i = 0; i <= a; i++) {
             text = text + fatiar[i]
         }
-        alert(text)
+        prompt_saida.innerText = text
     }
 
 
