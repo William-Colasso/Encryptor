@@ -23,6 +23,56 @@ var sha3 = document.getElementById('sha3')
 var _3des = document.getElementById('3des')
 
 
+
+
+function copy(){
+
+    var texto_copiar = document.getElementById('prompt_saida')
+
+    var texto_final = texto_copiar.toCopy.value
+
+    navigator.clipboard.writeText(texto_final).then(function(){
+
+        alert("copiado!")
+
+
+
+
+    })
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const text_voltar = document.getElementById('voltar')
 
 text_voltar.addEventListener('mouseenter', function(){

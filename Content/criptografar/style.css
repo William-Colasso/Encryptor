@@ -125,7 +125,7 @@ body::-webkit-scrollbar{
     position: absolute;
     padding: 20px 100px;
     left: 65vw;
-    top: 50vh;
+    top: 47.5vh;
     cursor: pointer;
     border: solid #323b32 2px;
     font-family: Pixel;
@@ -146,6 +146,44 @@ body::-webkit-scrollbar{
     color: white;
     color: #12a525;
 }
+
+
+#copy{
+    cursor: pointer;
+    background-color: black;
+    padding: 20px 20px;
+    position: relative;
+    left: 85vw;
+    top: -22.7vh;
+    color: #12a525;
+    border: solid #323b32 2px;
+    font-family: Pixel;
+
+}
+
+#copy:hover{
+    transition: 0.2s;
+    background-color: #187514;
+    color: black;
+
+}
+
+#copy:active{
+    content: "\2714"; /* Código Unicode do símbolo de certo */
+
+    background-color: black;
+    color: #008a07;
+
+}
+
+
+
+
+
+
+
+
+
 .falso_flow{
     visibility: hidden;
 }
@@ -159,7 +197,7 @@ body::-webkit-scrollbar{
     border: 1px solid #202020;
     position: absolute;
     padding: 10px;
-    left: 21vw;
+    left: 22.6vw;
 
     overflow-y: scroll; /* Ativar rolagem vertical */
     display: flex;
