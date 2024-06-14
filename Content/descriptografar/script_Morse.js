@@ -19,7 +19,7 @@ function encriptar() {
 
         
 
-        var fatiar = [tam]
+        var fatiar = [""]
 
 
         for (let i = 0; i < tam; i++) {
