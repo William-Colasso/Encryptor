@@ -20,7 +20,7 @@ body::-webkit-scrollbar{
     position: absolute;
     padding: 10px;
     
-    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-y: scroll; /* Ativando barra de rolagem vertical */
     display: flex;
     flex-direction: column;
     
