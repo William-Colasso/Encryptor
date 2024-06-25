@@ -1,6 +1,7 @@
 
 function encriptar() {
 
+    
     var aes = document.getElementById('aes')
     var blow_f = document.getElementById('blowfish')
     var codigo_binario = document.getElementById('codigo-binario')
@@ -24,7 +25,22 @@ function encriptar() {
     var sha3 = document.getElementById('sha3')
     var _3des = document.getElementById('3des')
 
-  
+    var text = document.getElementById('prompt_entrada').value
+    var texto = String(text)
+    texto = texto.toLowerCase()
+    var prompt_saida = document.getElementById('prompt_saida')
+    var tam = parseInt(texto.length)
+
+
+    const letraNumero = {
+        'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7,
+        'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14,
+        'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20, 'u': 21,
+        'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26
+    }
+
+
+    
 
     if (codigo_morse.checked) {
         morse()
@@ -39,22 +55,29 @@ function encriptar() {
 
     function cesar() {
 
+        var fatiar = [tam]
 
-        alert("aqui")
+        for (let i = 0; i < tam; i++) {
+            fatiar[i] = texto[i]
+        }
 
+        
+
+        for (let a = 0; a <= tam; a++) {
+            
+                fatiar[a] = letraNumero[fatiar[a]]
+            
+        }
+        var algo = ""
+        for (let e = 0; e < tam; e++) {
+            algo = algo + fatiar[e] + " "
+        }
+        prompt_saida.innerText = algo
 
     }
 
     function binario() {
-        var text = document.getElementById('prompt_entrada').value
 
-        var texto = String(text)
-        texto = texto.toLowerCase()
-        var prompt_saida = document.getElementById('prompt_saida')
-
-
-
-        var tam = parseInt(texto.length)
         var fatiar = [tam]
 
         for (let i = 0; i < tam; i++) {
@@ -237,13 +260,8 @@ function encriptar() {
     }
 
     function morse() {
-        var text = document.getElementById('prompt_entrada').value
 
-        var texto = String(text)
-        texto = texto.toLowerCase()
-        var prompt_saida = document.getElementById('prompt_saida')
-        var tam = parseInt(texto.length)
-    
+
         var fatiar = [tam]
 
         for (let i = 0; i < tam; i++) {
@@ -425,7 +443,7 @@ function encriptar() {
         prompt_saida.innerText = algo
     }
 
-
+    
 
 
 
