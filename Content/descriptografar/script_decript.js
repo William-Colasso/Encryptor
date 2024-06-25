@@ -1,8 +1,9 @@
 
-function encriptar() {
+function decriptar() {
     var aes = document.getElementById('aes')
     var blow_f = document.getElementById('blowfish')
     var codigo_binario = document.getElementById('codigo-binario')
+    var codigo_morse = document.getElementById('codigo-morse')
     var cifra_cesar = document.getElementById('cifra-cesar')
     var cifra_playfair = document.getElementById('cifra-playfair')
     var cifra_substituicao = document.getElementById('cifra-substituicao')
@@ -30,9 +31,22 @@ function encriptar() {
     if(codigo_binario.checked){
         binario()
     }
+    if (cifra_cesar.checked) {
+        cesar()
+    }
 
     function binario(){
         
+    }
+
+    
+
+    function cesar() {
+
+
+        alert("aqui")
+
+
     }
 
       function morse() {
