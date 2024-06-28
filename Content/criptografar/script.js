@@ -2,8 +2,6 @@ var cifra_cesar = document.getElementById('cifra-cesar')
 
 
 
-
-
 function copy(){
 
     var texto_copiar = document.getElementById('prompt_saida')
@@ -22,7 +20,6 @@ function copy(){
 
 
 }
-
 
 
 
