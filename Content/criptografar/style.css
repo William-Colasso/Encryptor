@@ -215,7 +215,7 @@ body::-webkit-scrollbar {
     font-size: large;
     border: solid black 1px;
     box-shadow: white 20px;
-    user-select: text;
+    user-select: all;
   }
 }
 @media(max-width: 704px){

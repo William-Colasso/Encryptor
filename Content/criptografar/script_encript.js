@@ -1,7 +1,7 @@
 
 function encriptar() {
 
-    
+
     var aes = document.getElementById('aes')
     var blow_f = document.getElementById('blowfish')
     var codigo_binario = document.getElementById('codigo-binario')
@@ -15,6 +15,7 @@ function encriptar() {
     var diffie_hellman = document.getElementById('diffie-hellman')
     var dsa = document.getElementById('dsa')
     var elgamal = document.getElementById('elgamal')
+    var letra_numero = document.getElementById('letra-numero')
     var md5 = document.getElementById('md5')
     var rc4 = document.getElementById('rc4')
     var rsa = document.getElementById('rsa')
@@ -24,7 +25,7 @@ function encriptar() {
     var sha2 = document.getElementById('sha2')
     var sha3 = document.getElementById('sha3')
     var _3des = document.getElementById('3des')
-
+    
     var text = document.getElementById('prompt_entrada').value
     var texto = String(text)
     texto = texto.toLowerCase()
@@ -35,14 +36,36 @@ function encriptar() {
     var numeros = document.getElementsByName('numbers')
 
     const letraNumero = {
-        'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7,
-        'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14,
-        'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20, 'u': 21,
-        'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26, ' ' : ' ', '!':''
+        'a': 1, 'á': 1, 'à': 1,'ä':1, 'b': 2, 'c': 3,
+    'd': 4, 'e': 5, 'é': 5, 'è': 5,'ë':5, 'f': 6,
+    'g': 7, 'h': 8, 'i': 9, 'í': 9, 'ì': 9,'ï':9,
+    'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14,
+    'o': 15, 'ó': 15, 'ò': 15,'ö':15, 'p': 16, 'q': 17,
+    'r': 18, 's': 19, 't': 20, 'u': 21, 'ú': 21,
+    'ù': 21,'ü':21, 'v': 22, 'w': 23, 'x': 24, 'y': 25,
+    'z': 26, '!': '', '@': '', '#': '',
+    '$': '', '%': '', '¨': '', '&': '', '*': '',
+    '(': '', ')': '', '_': '', '-': '', '+': '','´':'',
+    '=': '', '[': '', '{': '', ']': '', '}': '',
+    '\\': '', '|': '', ';': '', ':': '', '\'': '',
+    '"': '', ',': '', '<': '', '.': '', '>': '',
+    '/': '', '?': '', '`': '', '~': '', '§': '',
+    'ª': '', 'º': '', '^': '', '0':'', '1':'','2':'',
+    '3':'','4':'','5':'','6':'','7':'','8':'','9':'',
+    '¹':'','²':'','³':'','£':'','¬':''
+    }
+
+    const numeroLetra = {
+        1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E',
+    6: 'F', 7: 'G', 8: 'H', 9: 'I', 10: 'J',
+    11: 'K', 12: 'L', 13: 'M', 14: 'N', 15: 'O',
+    16: 'P', 17: 'Q', 18: 'R', 19: 'S', 20: 'T',
+    21: 'U', 22: 'V', 23: 'W', 24: 'X', 25: 'Y',
+    26: 'Z'
     }
 
 
-    
+
 
     if (codigo_morse.checked) {
         morse()
@@ -63,24 +86,38 @@ function encriptar() {
             fatiar[i] = texto[i]
         }
 
-        
-
-        for (let a = 0; a <= tam; a++) {
-            
-                fatiar[a] = letraNumero[fatiar[a]]
-            
-        }
-
-        for(let i =0; i<=25;i++){
-            if(numeros[i].checked){
-                escolhido = i+1
-                alert(escolhido)
+        for (let i = 0; i <= 25; i++) {
+            if (numeros[i].checked) {
+                escolhido = i + 1
                 break
             }
         }
 
+        for (let a = 0; a <= tam; a++) {
+
+            fatiar[a] = Number(letraNumero[fatiar[a]])
+            
+            if((fatiar[a]+escolhido)>26){
+                fatiar[a]+= escolhido-26
+            }
+            else{
+                fatiar[a]+=escolhido
+            }
+            
+        }
+        for (let a = 0; a <= tam; a++) {
+
+            fatiar[a] = numeroLetra[fatiar[a]]
+            
+        }
+
+        
+
         var algo = ""
         for (let e = 0; e < tam; e++) {
+            if(fatiar[e]==undefined){
+                fatiar[e]= " "
+            }
             algo = algo + fatiar[e] + " "
         }
         prompt_saida.innerText = algo
@@ -454,7 +491,7 @@ function encriptar() {
         prompt_saida.innerText = algo
     }
 
-    
+
 
 
 
