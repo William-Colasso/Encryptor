@@ -118,7 +118,7 @@ function encriptar() {
             if(fatiar[e]==undefined){
                 fatiar[e]= " "
             }
-            algo = algo + fatiar[e] + " "
+            algo = algo + fatiar[e] + ""
         }
         prompt_saida.innerText = algo
 
