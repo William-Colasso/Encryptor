@@ -49,7 +49,7 @@ function decriptar() {
     '/': '', '?': '', '`': '', '~': '', '§': '',
     'ª': '', 'º': '', '^': '', '0':'', '1':'','2':'',
     '3':'','4':'','5':'','6':'','7':'','8':'','9':'',
-    '¹':'','²':'','³':'','£':'','¬':'',' ':' '," ":" ",'?':-10
+    '¹':'','²':'','³':'','£':'','¬':''
     }
 
     const numeroLetra = {
@@ -58,7 +58,7 @@ function decriptar() {
     11: 'K', 12: 'L', 13: 'M', 14: 'N', 15: 'O',
     16: 'P', 17: 'Q', 18: 'R', 19: 'S', 20: 'T',
     21: 'U', 22: 'V', 23: 'W', 24: 'X', 25: 'Y',
-    26: 'Z',' ':' '," ":" "
+    26: 'Z'
     }
 
 
@@ -100,12 +100,13 @@ function decriptar() {
 
         for (let a = 0; a <= tam; a++) {
 
-            fatiar[a] = letraNumero[fatiar[a]]-escolhido
+            fatiar[a] = letraNumero[fatiar[a]]
             
-            if(fatiar[a]-escolhido<0){
+            if(fatiar[a]-escolhido<1){
                 auxi = escolhido-fatiar[a]
                 
                 fatiar[a]=26-auxi
+                fatiar[a] = numeroLetra[fatiar[a]]
             }
             else if(fatiar[a]!=" "){
                 fatiar[a] = numeroLetra[fatiar[a]]
@@ -118,9 +119,7 @@ function decriptar() {
 
         var algo = ""
         for (let e = 0; e < tam; e++) {
-            if(fatiar[e]==24){
-                fatiar[e]= " "
-            }
+            
             algo = algo + fatiar[e] + ""
         }
         prompt_saida.innerText = algo
