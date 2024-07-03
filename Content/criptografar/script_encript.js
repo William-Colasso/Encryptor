@@ -36,7 +36,7 @@ function encriptar() {
     var numeros = document.getElementsByName('numbers')
 
     const letraNumero = {
-        'a': 1, 'á': 1, 'à': 1,'ä':1, 'b': 2, 'c': 3,
+        'a': 1, 'á': 1, 'à': 1,'ä':1, 'b': 2, 'c': 3,'ç':3,
     'd': 4, 'e': 5, 'é': 5, 'è': 5,'ë':5, 'f': 6,
     'g': 7, 'h': 8, 'i': 9, 'í': 9, 'ì': 9,'ï':9,
     'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14,
