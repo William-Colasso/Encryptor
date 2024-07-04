@@ -122,8 +122,12 @@ function decriptar() {
 
         var algo = ""
         for (let e = 0; e < tam; e++) {
+            if(fatiar[e]==undefined){
+            algo+=" "    
+            }else{
+                algo = algo + fatiar[e] + ""
+            }
             
-            algo = algo + fatiar[e] + ""
         }
         prompt_saida.innerText = algo
 
