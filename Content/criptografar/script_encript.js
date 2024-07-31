@@ -32,6 +32,7 @@ function encriptar() {
     var prompt_saida = document.getElementById('prompt_saida')
     var tam = parseInt(texto.length)
 
+    
 
     var numeros = document.getElementsByName('numbers')
 
@@ -64,9 +65,6 @@ function encriptar() {
     26: 'Z'
     }
 
-
-
-
     if (codigo_morse.checked) {
         morse()
 
@@ -75,7 +73,10 @@ function encriptar() {
         binario()
     }
     if (cifra_cesar.checked) {
-        cesar()
+        prompt_saida.innerText = cesar()
+    }
+    if(aes.checked){
+        prompt_saida.innerText = window.crypto.subtle.encrypt(AES)
     }
 
     function cesar() {
@@ -120,7 +121,7 @@ function encriptar() {
             }
             algo = algo + fatiar[e] + ""
         }
-        prompt_saida.innerText = algo
+        return algo
 
     }
 
@@ -490,11 +491,6 @@ function encriptar() {
         }
         prompt_saida.innerText = algo
     }
-
-
-
-
-
 
 
 

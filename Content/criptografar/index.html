@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segunda página</title>
+    <title>Encrypt</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/Content/tela_Inicial/favicon.png" type="image/x-icon">
 </head>
@@ -13,7 +13,7 @@
     <div class="seletor">
         <label><input type="radio" name="criptografia" id="aes" checked> AES </label>
         <label><input type="radio" name="criptografia" id="blowfish"> Blowfish</label>
-        <label><input type="radio" name="criptografia" id="codigo-binario"> Código Binário</label>
+        <label><input type="radio" name="criptografia" id="codigo-binario" checked> Código Binário</label>
         <label><input type="radio" name="criptografia" id="codigo-morse"> Código Morse</label>
         <label><input type="radio" name="criptografia" id="cifra-cesar" > Cifra de César</label>
         <label><input type="radio" name="criptografia" id="cifra-playfair"> Cifra de Playfair</label>
@@ -36,31 +36,38 @@
         <label><input type="radio" name="criptografia" id="3des"> 3DES</label>
     </div>
     <div class="falso_flow" id="overflow_container">
-        <label><input type="radio" name="numbers" id="1" checked>1</label>
-        <label><input type="radio" name="numbers" id="2">2</label>
-        <label><input type="radio" name="numbers" id="3">3</label>
-        <label><input type="radio" name="numbers" id="4">4</label>
-        <label><input type="radio" name="numbers" id="5">5</label>
-        <label><input type="radio" name="numbers" id="6">6</label>
-        <label><input type="radio" name="numbers" id="7">7</label>
-        <label><input type="radio" name="numbers" id="8">8</label>
-        <label><input type="radio" name="numbers" id="9">9</label>
-        <label><input type="radio" name="numbers" id="10">10</label>
-        <label><input type="radio" name="numbers" id="11">11</label>
-        <label><input type="radio" name="numbers" id="12">12</label>
-        <label><input type="radio" name="numbers" id="13">13</label>
-        <label><input type="radio" name="numbers" id="14">14</label>
-        <label><input type="radio" name="numbers" id="15">15</label>
-        <label><input type="radio" name="numbers" id="16">16</label>
-        <label><input type="radio" name="numbers" id="17">17</label>
-        <label><input type="radio" name="numbers" id="18">18</label>
-        <label><input type="radio" name="numbers" id="19">19</label>
-        <label><input type="radio" name="numbers" id="20">20</label>
-        <label><input type="radio" name="numbers" id="21">21</label>
-        <label><input type="radio" name="numbers" id="22">22</label>
-        <label><input type="radio" name="numbers" id="23">23</label>
-        <label><input type="radio" name="numbers" id="24">24</label>
-        <label><input type="radio" name="numbers" id="25">25</label>
+        
+        <div class="segundo_flow">
+            <label><input type="radio" name="numbers" id="1" checked>1</label>
+            <label><input type="radio" name="numbers" id="2">2</label>
+            <label><input type="radio" name="numbers" id="3">3</label>
+            <label><input type="radio" name="numbers" id="4">4</label>
+            <label><input type="radio" name="numbers" id="5">5</label>
+            <label><input type="radio" name="numbers" id="6">6</label>
+            <label><input type="radio" name="numbers" id="7">7</label>
+            <label><input type="radio" name="numbers" id="8">8</label>
+            <label><input type="radio" name="numbers" id="9">9</label>
+            <label><input type="radio" name="numbers" id="10">10</label>
+            <label><input type="radio" name="numbers" id="11">11</label>
+            <label><input type="radio" name="numbers" id="12">12</label>
+            <label><input type="radio" name="numbers" id="13">13</label>
+            <label><input type="radio" name="numbers" id="14">14</label>
+            <label><input type="radio" name="numbers" id="15">15</label>
+            <label><input type="radio" name="numbers" id="16">16</label>
+            <label><input type="radio" name="numbers" id="17">17</label>
+            <label><input type="radio" name="numbers" id="18">18</label>
+            <label><input type="radio" name="numbers" id="19">19</label>
+            <label><input type="radio" name="numbers" id="20">20</label>
+            <label><input type="radio" name="numbers" id="21">21</label>
+            <label><input type="radio" name="numbers" id="22">22</label>
+            <label><input type="radio" name="numbers" id="23">23</label>
+            <label><input type="radio" name="numbers" id="24">24</label>
+            <label><input type="radio" name="numbers" id="25">25</label>
+        </div>
+    </div>
+    <div class="falso_flow" id="auxiliar">
+        <p id="textinho" >Prompt Auxiliar:</p>
+        <textarea name="prompt_auxiliar" id="prompt_auxiliar">Key</textarea>
     </div>
     <div>
 
@@ -72,9 +79,10 @@
 
     </div>
     <div><button id="cript" onclick="encriptar()" >Encriptar</button></div>
-    <div><button id="copy" > Copiar</button></div>
+    <div><button id="copy" onclick="copyToClipboard()"> Copiar</button></div>
    
 </body>
 <script src="script_encript.js"></script>
 <script src="script.js"></script>
+<script src="criptos.js"></script>
 </html>
