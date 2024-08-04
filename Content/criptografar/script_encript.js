@@ -32,8 +32,8 @@ function encriptar() {
     var prompt_saida = document.getElementById('prompt_saida')
     var tam = parseInt(texto.length)
 
-    
-
+    var prompt_auxiliar = document.getElementById("prompt_auxiliar").value
+    var typeAES = document.getElementsByName('typeAES')
     var numeros = document.getElementsByName('numbers')
 
     const letraNumero = {

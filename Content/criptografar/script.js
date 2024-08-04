@@ -124,7 +124,10 @@ setInterval(() => {
     
     if(aes.checked){
         elementoAuxiliar.classList.remove('falso_flow')
-        elementoAuxiliar;classList.add('verdadeiro_flow')
+        elementoAuxiliar.classList.add('verdadeiro_flow')
+    }else{
+        elementoAuxiliar.classList.remove('verdadeiro_flow')
+        elementoAuxiliar.classList.add('falso_flow')
     }
 
 

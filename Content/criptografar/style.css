@@ -1,5 +1,3 @@
-
-
 body {
   background-color: black;
   /*Caracteristicas gerais*/
@@ -143,12 +141,12 @@ body::-webkit-scrollbar {
     padding: 20px 20px;
     position: relative;
     left: 85vw;
-    top: -22.7vh;
+    top: -20.7vh;
     color: #12a525;
     border: solid #323b32 2px;
     font-family: Pixel;
-    display: flex;  
-    justify-content: center ;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
 
@@ -157,8 +155,6 @@ body::-webkit-scrollbar {
     background-color: #187514;
     color: black;
   }
-
-
 
   .falso_flow {
     visibility: hidden;
@@ -218,12 +214,12 @@ body::-webkit-scrollbar {
     user-select: all;
   }
 
-  #prompt_auxiliar{
+  #prompt_auxiliar {
     padding: 100px;
     font-size: 30px;
     margin: 120px 30px;
     color: rgb(0, 0, 0);
-    top: 40px; 
+    top: 40px;
     width: 15vw;
     height: 70vh;
     border: solid black 1px;
@@ -237,216 +233,285 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
   }
-  #textinho{
+  .aes {
+    font-size: 20px;
+    margin: 120px 20px;
+    color: white;
+    top: 40px; /*Definições gerais da Classe*/
+    width: 10vw;
+    height: 23.199vh;
+    border: 1px solid #202020;
+    position: absolute;
+    padding: 10px;
+    left: 40vw;
+    overflow-y: scroll; /* Ativar rolagem vertical */
+  }
+
+  .aes::-webkit-scrollbar {
+    background-color: rgb(0, 0, 0);
+  }
+  .aes::-webkit-scrollbar-thumb {
+    background-color: rgb(19, 18, 18);
+    border-radius: 10px;
+  }
+
+  .aes label {
+    border: solid 1px;
+    border-radius: 9px;
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  .aes label:hover {
+    color: #0d5510;
+    background-color: rgb(7, 7, 7);
+    cursor: pointer;
+  }
+
+  .aes label input[type="radio"] {
+    /* Oculta a caixa de seleção padrão */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Define o tamanho da caixa de seleção */
+    width: 20px;
+    height: 20px;
+    /* Define a cor de fundo da caixa de seleção */
+    background-color: #ffffff;
+    /* Adiciona uma borda à caixa de seleção */
+    border: 1px solid #99999900;
+    /* Adiciona um espaçamento interno para que o conteúdo não fique muito próximo da borda */
+    padding: 2px;
+    position: relative;
+    top: 3px;
+  }
+
+  .aes label input[type="radio"]:checked {
+    /* Define a cor de fundo da caixa de seleção quando clicada */
+    transition: 0.4s;
+    border-radius: 15px;
+    background-color: #008a07;
+  }
+
+  .aes label input[type="radio"]::after {
+    /* Conteúdo do símbolo (um "✔️") */
+    content: "\2714"; /* Código Unicode do símbolo de certo */
+    /* Posiciona o símbolo no centro da caixa de seleção */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Define a cor do símbolo */
+    color: #ffffff;
+    /* Define o tamanho do símbolo */
+    font-size: 16px;
+  }
+
+  #textinho {
     font-family: Pixel;
     color: white;
     position: absolute;
     color: white;
-    top: 12vh; /*Definições gerais da Classe*/
+    top: 12vh;
     width: 19vw;
     height: 70vh;
     left: 25.8vw;
-
   }
-  
 }
-@media(max-width: 704px){
-    .seletor {
-        font-size: 30px;
-        margin: 85px 10px;
-        color: white; /*Definições gerais da Classe*/
-        width: 35vw;
-        height: 70vh;
-        top: 40px;
-        border: 1px solid #202020;
-        position: absolute;
-        padding: 10px;
-    
-        overflow-y: scroll; /* Enable vertical scrolling */
-        display: flex;
-        flex-direction: column;
-      }
-      .seletor::-webkit-scrollbar {
-        background-color: rgb(0, 0, 0);
-        /*Desativar parte visual da  barra de rolagem*/
-      }
-      .seletor::-webkit-scrollbar-thumb {
-        background-color: rgb(19, 18, 18);
-        border-radius: 10px;
-    
-        /*Desativar parte visual da  barra de rolagem*/
-      }
-    
-      .seletor label {
-        border: solid 1px;
-        border-radius: 9px;
-        display: block;
-        margin-bottom: 48px;
-      }
-    
-      .seletor label:hover {
-        color: #0d5510;
-        background-color: rgb(7, 7, 7);
-        cursor: pointer;
-      }
-    
-      .seletor label input[type="radio"] {
-        /* Oculta a caixa de seleção padrão */
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        /* Define o tamanho da caixa de seleção */
-        width: 20px;
-        height: 20px;
-        /* Define a cor de fundo da caixa de seleção */
-        background-color: #ffffff;
-        /* Adiciona uma borda à caixa de seleção */
-        border: 1px solid #99999900;
-        /* Adiciona um espaçamento interno para que o conteúdo não fique muito próximo da borda */
-        padding: 2px;
-        position: relative;
-        top: 3px;
-      }
-    
-      .seletor label input[type="radio"]:checked {
-        /* Define a cor de fundo da caixa de seleção quando clicada */
-        transition: 0.4s;
-        border-radius: 15px;
-        background-color: #008a07;
-      }
-    
-      .seletor label input[type="radio"]:not(:checked) {
-        transition: 1.5s;
-        /*Transição de cores e forma depois que clicado*/
-        border-radius: 0px;
-        background-color: #ffffff;
-      }
-    
-      .seletor label input[type="radio"]::after {
-        /* Conteúdo do símbolo (um "✔️") */
-        content: "\2714"; /* Código Unicode do símbolo de certo */
-        /* Posiciona o símbolo no centro da caixa de seleção */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /* Define a cor do símbolo */
-        color: #ffffff;
-        /* Define o tamanho do símbolo */
-        font-size: 16px;
-      }
-    
-      #voltar {
-        font-size: 15px;
-        font-family: Pixel;
-        text-decoration: none;
-        position: absolute;
-        left: 5vw;
-        top: 3vh;
-        padding: 20px 60px;
-        background-color: black;
-        border: solid;
-        color: #ffffff;
-      }
-    
-      #voltar:hover {
-        color: #008a07;
-        content: "V0lt@r";
-      }
-    
-      #cript {
-        position: relative;
-        padding: 20px 100px;
-        left: 90vw;
-        top: -25vh;
-        cursor: pointer;
-        border: solid #323b32 2px;
-        font-family: Pixel;
-        background-color: rgb(0, 0, 0);
-        color: #12a525;
-        border-radius: 15px;
-      }
-    
-      #cript:hover {
-        transition: 0.2s;
-        background-color: #187514;
-        color: black;
-      }
-      #cript:active {
-        transition: 0.1s;
-        background-color: black;
-        color: white;
-        color: #12a525;
-      }
-    
-      #copy {
-        display: none;
-      }
-    
-      .verdadeiro_flow{
-        visibility: show;
-      }
-    
-      .falso_flow {
-        visibility: hidden;
-      }
-      .segundo_flow {
-        font-size: 30px;
-        margin: 85px 30px;
-        color: white;
-        top: 40px; /*Definições gerais da Classe*/
-        width: 15vw;
-        height: 70vh;
-        border: 1px solid #202020;
-        position: absolute;
-        padding: 10px;
-        left: 35vw;
-    
-        overflow-y: scroll; /* Ativar rolagem vertical */
-        display: flex;
-        flex-direction: column;
-      }
-    
-      .segundo_flow::-webkit-scrollbar {
-        background-color: rgb(0, 0, 0);
-        /*Desativar parte visual da  barra de rolagem*/
-      }
-      .segundo_flow::-webkit-scrollbar-thumb {
-        background-color: rgb(19, 18, 18);
-        border-radius: 10px;
-    
-        /*Desativar parte visual da  barra de rolagem*/
-      }
-    
-      #prompt_entrada {
-        background-color: white;
-        position: relative;
-        top: 5vh;
-        left: 90vw;
-        width: 70vw;
-        height: 30vh;
-        font-size: large;
-        border: solid black 1px;
-        box-shadow: white 20px;
-        border: solid green;
-        border-radius: 2px;
-      }
-    
-      #prompt_saida {
-        background-color: white;
-        position: relative;
-        top: 25vh;
-        left: 90vw;
-        width: 70vw;
-        height: 30vh;
-        font-size: large;
-        border: solid black 1px;
-        box-shadow: white 20px;
-        user-select: text;
-      }
+@media (max-width: 704px) {
+  .seletor {
+    font-size: 30px;
+    margin: 85px 10px;
+    color: white; /*Definições gerais da Classe*/
+    width: 35vw;
+    height: 70vh;
+    top: 40px;
+    border: 1px solid #202020;
+    position: absolute;
+    padding: 10px;
 
+    overflow-y: scroll; /* Enable vertical scrolling */
+    display: flex;
+    flex-direction: column;
+  }
+  .seletor::-webkit-scrollbar {
+    background-color: rgb(0, 0, 0);
+    /*Desativar parte visual da  barra de rolagem*/
+  }
+  .seletor::-webkit-scrollbar-thumb {
+    background-color: rgb(19, 18, 18);
+    border-radius: 10px;
 
+    /*Desativar parte visual da  barra de rolagem*/
+  }
 
+  .seletor label {
+    border: solid 1px;
+    border-radius: 9px;
+    display: block;
+    margin-bottom: 48px;
+  }
+
+  .seletor label:hover {
+    color: #0d5510;
+    background-color: rgb(7, 7, 7);
+    cursor: pointer;
+  }
+
+  .seletor label input[type="radio"] {
+    /* Oculta a caixa de seleção padrão */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Define o tamanho da caixa de seleção */
+    width: 20px;
+    height: 20px;
+    /* Define a cor de fundo da caixa de seleção */
+    background-color: #ffffff;
+    /* Adiciona uma borda à caixa de seleção */
+    border: 1px solid #99999900;
+    /* Adiciona um espaçamento interno para que o conteúdo não fique muito próximo da borda */
+    padding: 2px;
+    position: relative;
+    top: 3px;
+  }
+
+  .seletor label input[type="radio"]:checked {
+    /* Define a cor de fundo da caixa de seleção quando clicada */
+    transition: 0.4s;
+    border-radius: 15px;
+    background-color: #008a07;
+  }
+
+  .seletor label input[type="radio"]:not(:checked) {
+    transition: 1.5s;
+    /*Transição de cores e forma depois que clicado*/
+    border-radius: 0px;
+    background-color: #ffffff;
+  }
+
+  .seletor label input[type="radio"]::after {
+    /* Conteúdo do símbolo (um "✔️") */
+    content: "\2714"; /* Código Unicode do símbolo de certo */
+    /* Posiciona o símbolo no centro da caixa de seleção */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Define a cor do símbolo */
+    color: #ffffff;
+    /* Define o tamanho do símbolo */
+    font-size: 16px;
+  }
+
+  #voltar {
+    font-size: 15px;
+    font-family: Pixel;
+    text-decoration: none;
+    position: absolute;
+    left: 5vw;
+    top: 3vh;
+    padding: 20px 60px;
+    background-color: black;
+    border: solid;
+    color: #ffffff;
+  }
+
+  #voltar:hover {
+    color: #008a07;
+    content: "V0lt@r";
+  }
+
+  #cript {
+    position: relative;
+    padding: 20px 100px;
+    left: 90vw;
+    top: -25vh;
+    cursor: pointer;
+    border: solid #323b32 2px;
+    font-family: Pixel;
+    background-color: rgb(0, 0, 0);
+    color: #12a525;
+    border-radius: 15px;
+  }
+
+  #cript:hover {
+    transition: 0.2s;
+    background-color: #187514;
+    color: black;
+  }
+  #cript:active {
+    transition: 0.1s;
+    background-color: black;
+    color: white;
+    color: #12a525;
+  }
+
+  #copy {
+    display: none;
+  }
+
+  .verdadeiro_flow {
+    visibility: show;
+  }
+
+  .falso_flow {
+    visibility: hidden;
+  }
+  .segundo_flow {
+    font-size: 30px;
+    margin: 85px 30px;
+    color: white;
+    top: 40px; /*Definições gerais da Classe*/
+    width: 15vw;
+    height: 70vh;
+    border: 1px solid #202020;
+    position: absolute;
+    padding: 10px;
+    left: 35vw;
+
+    overflow-y: scroll; /* Ativar rolagem vertical */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .segundo_flow::-webkit-scrollbar {
+    background-color: rgb(0, 0, 0);
+    /*Desativar parte visual da  barra de rolagem*/
+  }
+  .segundo_flow::-webkit-scrollbar-thumb {
+    background-color: rgb(19, 18, 18);
+    border-radius: 10px;
+
+    /*Desativar parte visual da  barra de rolagem*/
+  }
+
+  #prompt_entrada {
+    background-color: white;
+    position: relative;
+    top: 5vh;
+    left: 90vw;
+    width: 70vw;
+    height: 30vh;
+    font-size: large;
+    border: solid black 1px;
+    box-shadow: white 20px;
+    border: solid green;
+    border-radius: 2px;
+  }
+
+  #prompt_saida {
+    background-color: white;
+    position: relative;
+    top: 25vh;
+    left: 90vw;
+    width: 70vw;
+    height: 30vh;
+    font-size: large;
+    border: solid black 1px;
+    box-shadow: white 20px;
+    user-select: text;
+  }
 }
 @font-face {
   font-family: Pixel;
