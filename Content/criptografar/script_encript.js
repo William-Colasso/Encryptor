@@ -35,6 +35,14 @@ function encriptar() {
     var prompt_auxiliar = document.getElementById("prompt_auxiliar").value
     var typeAES = document.getElementsByName('typeAES')
     var numeros = document.getElementsByName('numbers')
+    var numero 
+    for (let i = 0; i <= 25; i++) {
+        if (numeros[i].checked) {
+            numero = i + 1
+            break
+        }
+    }
+
 
     const letraNumero = {
         'a': 1, 'á': 1, 'à': 1,'ä':1, 'b': 2, 'c': 3,'ç':3,
@@ -66,25 +74,24 @@ function encriptar() {
     }
 
     if (codigo_morse.checked) {
-        morse()
+        prompt_saida.innerText = morseEncrypt(texto)
 
     }
     if (codigo_binario.checked) {
-        binario()
+        prompt_saida.innerText = binarioEncrypt(texto)
     }
     if (cifra_cesar.checked) {
-        prompt_saida.innerText = cesar()
+        prompt_saida.innerText = cesarEncrypt(texto, numero)
     }
     if(aes.checked){
         prompt_saida.innerText = window.crypto.subtle.encrypt(AES)
     }
 
-    function cesar() {
-        var escolhido = 0
+    function cesarEncrypt(vetor, escolhido) {
         var fatiar = [tam]
 
         for (let i = 0; i < tam; i++) {
-            fatiar[i] = texto[i]
+            fatiar[i] = vetor[i]
         }
 
         for (let i = 0; i <= 25; i++) {
@@ -125,179 +132,64 @@ function encriptar() {
 
     }
 
-    function binario() {
+    function binarioEncrypt(vetor) {
 
         var fatiar = [tam]
 
-        for (let i = 0; i < tam; i++) {
-            fatiar[i] = texto[i]
+        for (let a = 0; a < tam; a++) {
+            fatiar[a] = texto[a]
         }
 
-        for (let a = 0; a <= tam; a++) {
-            if (fatiar[a] == "a") {
-                fatiar[a] = "01100001"
-            }
-            else if (fatiar[a] == "b") {
-                fatiar[a] = "01100010"
-            }
-            else if (fatiar[a] == "c") {
-                fatiar[a] = "01100011"
-            }
-            else if (fatiar[a] == "d") {
-                fatiar[a] = "01100100"
-            }
-            else if (fatiar[a] == "e") {
-                fatiar[a] = "01100101"
-            }
-            else if (fatiar[a] == "f") {
-                fatiar[a] = "01100110"
-            }
-            else if (fatiar[a] == "g") {
-                fatiar[a] = "01100111"
-            }
-            else if (fatiar[a] == "h") {
-                fatiar[a] = "01101000"
-            }
-            else if (fatiar[a] == "i") {
-                fatiar[a] = "01101001"
-            }
-            else if (fatiar[a] == "j") {
-                fatiar[a] = "01101010"
-            }
-            else if (fatiar[a] == "k") {
-                fatiar[a] = "01101011"
-            }
-            else if (fatiar[a] == "l") {
-                fatiar[a] = "01101100"
-            }
-            else if (fatiar[a] == "m") {
-                fatiar[a] = "01101101"
-            }
-            else if (fatiar[a] == "n") {
-                fatiar[a] = "01101110"
-            }
-            else if (fatiar[a] == "o") {
-                fatiar[a] = "01101111"
-            }
-            else if (fatiar[a] == "p") {
-                fatiar[a] = "01110000"
-            }
-            else if (fatiar[a] == "q") {
-                fatiar[a] = "01110001"
-            }
-            else if (fatiar[a] == "r") {
-                fatiar[a] = "01110010"
-            }
-            else if (fatiar[a] == "s") {
-                fatiar[a] = "01110011"
-            }
-            else if (fatiar[a] == "t") {
-                fatiar[a] = "01110100"
-            }
-            else if (fatiar[a] == "u") {
-                fatiar[a] = "01110101"
-            }
-            else if (fatiar[a] == "v") {
-                fatiar[a] = "01110110"
-            }
-            else if (fatiar[a] == "w") {
-                fatiar[a] = "01110111"
-            }
-            else if (fatiar[a] == "x") {
-                fatiar[a] = "01111000"
-            }
-            else if (fatiar[a] == "y") {
-                fatiar[a] = "01111001"
-            }
-            else if (fatiar[a] == "z") {
-                fatiar[a] = "01111010"
-            }
-            else if (fatiar[a] == "1") {
-                fatiar[a] = "00110001"
-            }
-            else if (fatiar[a] == "2") {
-                fatiar[a] = "00110010"
-            }
-            else if (fatiar[a] == "3") {
-                fatiar[a] = "00110011"
-            }
-            else if (fatiar[a] == "4") {
-                fatiar[a] = "00110100"
-            }
-            else if (fatiar[a] == "5") {
-                fatiar[a] = "00110101"
-            }
-            else if (fatiar[a] == "6") {
-                fatiar[a] = "00110110"
-            }
-            else if (fatiar[a] == "7") {
-                fatiar[a] = "00110111"
-            }
-            else if (fatiar[a] == "8") {
-                fatiar[a] = "00111000"
-            }
-            else if (fatiar[a] == "9") {
-                fatiar[a] = "00111001"
-            }
-            else if (fatiar[a] == "0") {
-                fatiar[a] = "00110000"
-            }
-            else if (fatiar[a] == " ") {
-                fatiar[a] = "00100000"
-            }
-            else if (fatiar[a] == "é") {
-                fatiar[a] = "11101001"
-            }
-            else if (fatiar[a] == "ã") {
-                fatiar[a] = "11100011"
-            }
-            else if (fatiar[a] == "á") {
-                fatiar[a] = ".-"
-            }
-            else if (fatiar[a] == "à") {
-                fatiar[a] = ".-"
-            }
-            else if (fatiar[a] == "â") {
-                fatiar[a] = ".-"
-            }
-            else if (fatiar[a] == "è") {
-                fatiar[a] = "."
-            }
-            else if (fatiar[a] == "ê") {
-                fatiar[a] = "."
-            }
-            else if (fatiar[a] == "ó") {
-                fatiar[a] = "---"
-            }
-            else if (fatiar[a] == "ò") {
-                fatiar[a] = "---"
-            }
-            else if (fatiar[a] == "õ") {
-                fatiar[a] = "---"
-            }
-            else if (fatiar[a] == "ô") {
-                fatiar[a] = "---"
-            }
-            else if (fatiar[a] == "í") {
-                fatiar[a] = ".."
-            }
-            else if (fatiar[a] == "ì") {
-                fatiar[a] = ".."
-            }
-            else if (fatiar[a] == "î") {
-                fatiar[a] = ".."
-            }
-            else if (fatiar[a] == "ú") {
-                fatiar[a] = "..-"
-            }
-            else if (fatiar[a] == "ù") {
-                fatiar[a] = "..-"
-            }
-            else if (fatiar[a] == "û") {
-                fatiar[a] = "..-"
-            }
-            else {
-                fatiar[a] = ""
+        const binaryHash = {
+            // Letras em Caixa baixa
+            "a": "01100001", "b": "01100010", "c": "01100011", "d": "01100100",
+            "e": "01100101", "f": "01100110", "g": "01100111", "h": "01101000",
+            "i": "01101001", "j": "01101010", "k": "01101011", "l": "01101100",
+            "m": "01101101", "n": "01101110", "o": "01101111", "p": "01110000",
+            "q": "01110001", "r": "01110010", "s": "01110011", "t": "01110100",
+            "u": "01110101", "v": "01110110", "w": "01110111", "x": "01111000",
+            "y": "01111001", "z": "01111010",
+        
+            // Letras em Caixa alta
+            "A": "01000001", "B": "01000010", "C": "01000011", "D": "01000100",
+            "E": "01000101", "F": "01000110", "G": "01000111", "H": "01001000",
+            "I": "01001001", "J": "01001010", "K": "01001011", "L": "01001100",
+            "M": "01001101", "N": "01001110", "O": "01001111", "P": "01010000",
+            "Q": "01010001", "R": "01010010", "S": "01010011", "T": "01010100",
+            "U": "01010101", "V": "01010110", "W": "01010111", "X": "01011000",
+            "Y": "01011001", "Z": "01011010",
+        
+            // Algarismos
+            "0": "00110000", "1": "00110001", "2": "00110010", "3": "00110011",
+            "4": "00110100", "5": "00110101", "6": "00110110", "7": "00110111",
+            "8": "00111000", "9": "00111001",
+        
+            // Caracteres Especiais
+            " ": "00100000", "!": "00100001", "\"": "00100010", "#": "00100011",
+            "$": "00100100", "%": "00100101", "&": "00100110", "'": "00100111",
+            "(": "00101000", ")": "00101001", "*": "00101010", "+": "00101011",
+            ",": "00101100", "-": "00101101", ".": "00101110", "/": "00101111",
+            ":": "00111010", ";": "00111011", "<": "00111100", "=": "00111101",
+            ">": "00111110", "?": "00111111", "@": "01000000", "[": "01011011",
+            "\\": "01011100", "]": "01011101", "^": "01011110", "_": "01011111",
+            "`": "01100000", "{": "01111011", "|": "01111100", "}": "01111101",
+            "~": "01111110",
+        
+            // Caracteres Acentuados
+            "é": "11101001", "ã": "11100011", "á": "01100001",
+            "à": "01100001", "â": "01100001", "è": "01100101",
+            "ê": "01100101", "ó": "01101111", "ò": "01101111",
+            "õ": "01101111", "ô": "01101111", "í": "01101001",
+            "ì": "01101001", "î": "01101001", "ú": "01110101",
+            "ù": "01110101", "û": "01110101"
+        }
+        
+
+        for (let a = 0; a < fatiar.length; a++) {
+            if (binaryHash.hasOwnProperty(fatiar[a])) {
+                fatiar[a] = binaryHash[fatiar[a]];
+            } else {
+                fatiar[a] = "" 
             }
         }
 
@@ -305,191 +197,45 @@ function encriptar() {
         for (let e = 0; e < tam; e++) {
             algo = algo + fatiar[e] + " "
         }
-        prompt_saida.innerText = algo
+        return algo
     }
 
-    function morse() {
+    function morseEncrypt(vetor) {
 
 
-        var fatiar = [tam]
+        var fatiar = [vetor.length]
 
-        for (let i = 0; i < tam; i++) {
-            fatiar[i] = texto[i]
+        for (let a = 0; a < vetor.length; a++) {
+            fatiar[a] = vetor[a]
         }
 
-        for (let a = 0; a <= tam; a++) {
-            if (fatiar[a] == "a") {
-                fatiar[a] = ".-"
-            }
-            else if (fatiar[a] == "b") {
-                fatiar[a] = "-..."
-            }
-            else if (fatiar[a] == "c") {
-                fatiar[a] = "-.-."
-            }
-            else if (fatiar[a] == "d") {
-                fatiar[a] = "-.."
-            }
-            else if (fatiar[a] == "e") {
-                fatiar[a] = "."
-            }
-            else if (fatiar[a] == "f") {
-                fatiar[a] = "..-."
-            }
-            else if (fatiar[a] == "g") {
-                fatiar[a] = "--."
-            }
-            else if (fatiar[a] == "h") {
-                fatiar[a] = "...."
-            }
-            else if (fatiar[a] == "i") {
-                fatiar[a] = ".."
-            }
-            else if (fatiar[a] == "j") {
-                fatiar[a] = ".---"
-            }
-            else if (fatiar[a] == "k") {
-                fatiar[a] = "-.-"
-            }
-            else if (fatiar[a] == "l") {
-                fatiar[a] = ".-.."
-            }
-            else if (fatiar[a] == "m") {
-                fatiar[a] = "--"
-            }
-            else if (fatiar[a] == "n") {
-                fatiar[a] = "-."
-            }
-            else if (fatiar[a] == "o") {
-                fatiar[a] = "---"
-            }
-            else if (fatiar[a] == "p") {
-                fatiar[a] = ".--."
-            }
-            else if (fatiar[a] == "q") {
-                fatiar[a] = "--.-"
-            }
-            else if (fatiar[a] == "r") {
-                fatiar[a] = ".-."
-            }
-            else if (fatiar[a] == "s") {
-                fatiar[a] = "..."
-            }
-            else if (fatiar[a] == "t") {
-                fatiar[a] = "-"
-            }
-            else if (fatiar[a] == "u") {
-                fatiar[a] = "..-"
-            }
-            else if (fatiar[a] == "v") {
-                fatiar[a] = "...-"
-            }
-            else if (fatiar[a] == "w") {
-                fatiar[a] = ".--"
-            }
-            else if (fatiar[a] == "x") {
-                fatiar[a] = "-..-"
-            }
-            else if (fatiar[a] == "y") {
-                fatiar[a] = "-.--"
-            }
-            else if (fatiar[a] == "z") {
-                fatiar[a] = "--.."
-            }
-            else if (fatiar[a] == "1") {
-                fatiar[a] = ".----"
-            }
-            else if (fatiar[a] == "2") {
-                fatiar[a] = "..---"
-            }
-            else if (fatiar[a] == "3") {
-                fatiar[a] = "...--"
-            }
-            else if (fatiar[a] == "4") {
-                fatiar[a] = "....-"
-            }
-            else if (fatiar[a] == "5") {
-                fatiar[a] = "....."
-            }
-            else if (fatiar[a] == "6") {
-                fatiar[a] = "-...."
-            }
-            else if (fatiar[a] == "7") {
-                fatiar[a] = "--..."
-            }
-            else if (fatiar[a] == "8") {
-                fatiar[a] = "---.."
-            }
-            else if (fatiar[a] == "9") {
-                fatiar[a] = "----."
-            }
-            else if (fatiar[a] == "0") {
-                fatiar[a] = "-----"
-            }
-            else if (fatiar[a] == " ") {
-                fatiar[a] = " / "
-            }
-            else if (fatiar[a] == "é") {
-                fatiar[a] = "."
-            }
-            else if (fatiar[a] == "ã") {
-                fatiar[a] = ".-"
-            }
-            else if (fatiar[a] == "á") {
-                fatiar[a] = ".-"
-            }
-            else if (fatiar[a] == "à") {
-                fatiar[a] = ".-"
-            }
-            else if (fatiar[a] == "â") {
-                fatiar[a] = ".-"
-            }
-            else if (fatiar[a] == "è") {
-                fatiar[a] = "."
-            }
-            else if (fatiar[a] == "ê") {
-                fatiar[a] = "."
-            }
-            else if (fatiar[a] == "ó") {
-                fatiar[a] = "---"
-            }
-            else if (fatiar[a] == "ò") {
-                fatiar[a] = "---"
-            }
-            else if (fatiar[a] == "õ") {
-                fatiar[a] = "---"
-            }
-            else if (fatiar[a] == "ô") {
-                fatiar[a] = "---"
-            }
-            else if (fatiar[a] == "í") {
-                fatiar[a] = ".."
-            }
-            else if (fatiar[a] == "ì") {
-                fatiar[a] = ".."
-            }
-            else if (fatiar[a] == "î") {
-                fatiar[a] = ".."
-            }
-            else if (fatiar[a] == "ú") {
-                fatiar[a] = "..-"
-            }
-            else if (fatiar[a] == "ù") {
-                fatiar[a] = "..-"
-            }
-            else if (fatiar[a] == "û") {
-                fatiar[a] = "..-"
-            }
-            else {
-                fatiar[a] = ""
+        const morseHash = {
+            "a": ".-", "b": "-...", "c": "-.-.", "d": "-..", "e": ".",
+            "f": "..-.", "g": "--.", "h": "....", "i": "..", "j": ".---",
+            "k": "-.-", "l": ".-..", "m": "--", "n": "-.", "o": "---",
+            "p": ".--.", "q": "--.-", "r": ".-.", "s": "...", "t": "-",
+            "u": "..-", "v": "...-", "w": ".--", "x": "-..-", "y": "-.--",
+            "z": "--..", "1": ".----", "2": "..---", "3": "...--", "4": "....-",
+            "5": ".....", "6": "-....", "7": "--...", "8": "---..", "9": "----.",
+            "0": "-----", " ": " / ", "é": ".", "ã": ".-", "á": ".-", 
+            "à": ".-", "â": ".-", "è": ".", "ê": ".", "ó": "---", 
+            "ò": "---", "õ": "---", "ô": "---", "í": "..", "ì": "..",
+            "î": "..", "ú": "..-", "ù": "..-", "û": "..-"
+        }
+
+        for (let a = 0; a < fatiar.length; a++) {
+            if (morseHash.hasOwnProperty(fatiar[a])) {
+                fatiar[a] = morseHash[fatiar[a]];
+            } else {
+                fatiar[a] = "" 
             }
         }
 
         var algo = ""
-        for (let e = 0; e < tam; e++) {
-            algo = algo + fatiar[e] + " "
+        for (let a = 0; a < tam; a++) {
+            algo = algo + fatiar[a] + " "
         }
-        prompt_saida.innerText = algo
+        return algo
     }
 
 

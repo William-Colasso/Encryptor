@@ -37,14 +37,14 @@ var texto_copiar = document.getElementById('prompt_saida').innerText
             copy.innerHTML = "Copiado!"
             copy.style.color = "white"
             
-            // Check clipboard content after some delay to give time for user action
+            
             setTimeout(async () => {
                 let clipboardContent = await navigator.clipboard.readText()
                 if (clipboardContent !== texto_copiar) {
                     copy.innerHTML = "copiar"
                     copy.style.color = "#12a525"
                 }
-            }, 3000) // Adjust the delay as needed
+            }, 3000) 
         } catch (err) {
             console.error('Erro ao copiar texto: ', err)
         }

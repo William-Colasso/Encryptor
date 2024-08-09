@@ -65,24 +65,26 @@ function decriptar() {
 
 
     if (codigo_morse.checked) {
-        morse()
+        prompt_saida.innerText = morseDecrypt(texto)
 
     }
-
-    if(codigo_binario.checked){
-        binario()
+    if (codigo_binario.checked) {
+        prompt_saida.innerText = binarioDecrypt(texto)
     }
     if (cifra_cesar.checked) {
-        cesar1()
+        prompt_saida.innerText = cesarDecrypt(texto, numero)
+    }
+    if(aes.checked){
+        prompt_saida.innerText = window.crypto.subtle.encrypt(AES)
     }
 
-    function binario(){
+    function binarioDecrypt(){
         
     }
 
     
 
-    function cesar1() {
+    function cesarDecrypt() {
         var auxi
         var escolhido = 0
         var fatiar = [tam]
@@ -133,7 +135,7 @@ function decriptar() {
 
     }
 
-      function morse() {
+      function morseDecrypt() {
 
         var text1 = document.getElementById('prompt_entrada').value
         var texto = String(text1)
