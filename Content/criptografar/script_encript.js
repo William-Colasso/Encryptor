@@ -28,7 +28,7 @@ function encriptar() {
     
     var text = document.getElementById('prompt_entrada').value
     var texto = String(text)
-    texto = texto.toLowerCase()
+    
     var prompt_saida = document.getElementById('prompt_saida')
     var tam = parseInt(texto.length)
 
@@ -134,7 +134,7 @@ function encriptar() {
 
     function binarioEncrypt(vetor) {
 
-        var fatiar = [tam]
+        var fatiar = [vetor.length]
 
         for (let a = 0; a < tam; a++) {
             fatiar[a] = texto[a]
