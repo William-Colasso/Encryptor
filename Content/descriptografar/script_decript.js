@@ -26,7 +26,7 @@ function decriptar() {
     var text = document.getElementById('prompt_entrada').value
     var texto = String(text)
     var prompt_saida = document.getElementById('prompt_saida')
-    var tam = parseInt(texto.length)
+    
 
     var numeros = document.getElementsByName('numbers')
 
@@ -85,10 +85,21 @@ function decriptar() {
     }
 
     function binarioDecrypt(vetor) {
-        var fatiar = [vetor.length]
+        var fatiar = []
 
-        for (let a = 0; a < tam; a++) {
-            fatiar[a] = vetor[a]
+        for(let i=0; i<vetor.length;i++){
+
+        }
+
+
+        for (let a = 0; a < vetor.length/8; a++) {
+            for(let i=0; i<8;i++){
+                if(vetor[i]==="0" || vetor[i]==="1") {
+                    fatiar[a] += vetor[i]
+                }
+                
+            }
+            alert(fatiar[a])
         }
 
         const binaryHash = {
@@ -139,15 +150,15 @@ function decriptar() {
 
         for (let a = 0; a < vetor.length; a++) {
             if (binaryHash.hasOwnProperty(fatiar[a])) {
-                fatiar[a] = binaryHash[fatiar[a]];
+                fatiar[a] = binaryHash[fatiar[a]]
             } else {
                 fatiar[a] = ""
             }
         }
 
         var algo = ""
-        for (let e = 0; e < tam; e++) {
-            algo = algo + fatiar[e] + " "
+        for (let i = 0; i< vetor.length; i++) {
+            algo +=fatiar[i] + ""
         }
         return algo
     }
@@ -158,18 +169,12 @@ function decriptar() {
         var escolhido
         var fatiar = [vetor.length]
 
-        for (let i = 0; i < tam; i++) {
+        for (let i = 0; i < vetor.length; i++) {
             fatiar[i] = texto[i]
         }
 
-        for (let i = 0; i <= 25; i++) {
-            if (numeros[i].checked) {
-                escolhido = i + 1
-                break
-            }
-        }
-
-        for (let a = 0; a <= tam; a++) {
+        
+        for (let a = 0; a <= vetor.length; a++) {
 
             fatiar[a] = letraNumero[fatiar[a]]
 
@@ -192,7 +197,7 @@ function decriptar() {
 
 
         var algo = ""
-        for (let e = 0; e < tam; e++) {
+        for (let e = 0; e < vetor.length; e++) {
             if (fatiar[e] == undefined) {
                 algo += " "
             } else {
