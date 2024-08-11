@@ -47,11 +47,12 @@ var texto_copiar = document.getElementById('prompt_saida').innerText
             }, 3000) 
         } catch (err) {
             console.error('Erro ao copiar texto: ', err)
+            copy.innerHTML = "Erro!"
         }
     }
 
 
-
+ 
 
 
 
