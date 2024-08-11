@@ -194,8 +194,8 @@ function encriptar() {
         }
 
         var algo = ""
-        for (let e = 0; e < tam; e++) {
-            algo = algo + fatiar[e] + " "
+        for (let e = 0; e < fatiar.length; e++) {
+            algo = algo + fatiar[e] + ""
         }
         return algo
     }

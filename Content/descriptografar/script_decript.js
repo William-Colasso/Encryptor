@@ -85,22 +85,23 @@ function decriptar() {
     }
 
     function binarioDecrypt(vetor) {
-        var fatiar = []
+        let fatira2 = []
 
-        for(let i=0; i<vetor.length;i++){
-
-        }
-
-
-        for (let a = 0; a < vetor.length/8; a++) {
-            for(let i=0; i<8;i++){
-                if(vetor[i]==="0" || vetor[i]==="1") {
-                    fatiar[a] += vetor[i]
+            // Step 1: Filter out non-binary characters from the input
+            for (let i = 0; i < vetor.length; i++) {
+                if (vetor[i] === "0" || vetor[i] === "1") {
+                    fatira2.push(vetor[i])
                 }
-                
             }
-            alert(fatiar[a])
-        }
+
+            // Step 2: Divide the binary string into chunks of 8 bits
+            let fatiar = []
+            for (let i = 0; i < fatira2.length; i += 8) {
+                let chunk = fatira2.slice(i, i + 8).join('')
+                fatiar.push(chunk)
+            }
+
+        
 
         const binaryHash = {
             // Lowercase letters
@@ -134,33 +135,19 @@ function decriptar() {
             "00111010": ":", "00111011": ";", "00111100": "<", "00111101": "=",
             "00111110": ">", "00111111": "?", "01000000": "@", "01011011": "[",
             "01011100": "\\", "01011101": "]", "01011110": "^", "01011111": "_",
-            "01100000": "`", "01111011": "{", "01111100": "|", "01111101": "}",
-            "01111110": "~",
-
-            // Extended characters (sample)
-            "11101001": "é", "11100011": "ã", "01100001": "á",
-            "01100001": "à", "01100001": "â", "01100101": "è",
-            "01100101": "ê", "01101111": "ó", "01101111": "ò",
-            "01101111": "õ", "01101111": "ô", "01101001": "í",
-            "01101001": "ì", "01101001": "î", "01110101": "ú",
-            "01110101": "ù", "01110101": "û"
+            "01100000": "`", "01111011": "{", "01111100": "|", "01111101": "}"
         }
 
 
 
-        for (let a = 0; a < vetor.length; a++) {
-            if (binaryHash.hasOwnProperty(fatiar[a])) {
-                fatiar[a] = binaryHash[fatiar[a]]
-            } else {
-                fatiar[a] = ""
+        let algo = "";
+        for (let i = 0; i < fatiar.length; i++) {
+            if (binaryHash.hasOwnProperty(fatiar[i])) {
+                algo += binaryHash[fatiar[i]]
             }
         }
-
-        var algo = ""
-        for (let i = 0; i< vetor.length; i++) {
-            algo +=fatiar[i] + ""
-        }
-        return algo
+    
+        return algo;
     }
 
 
