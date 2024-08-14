@@ -84,8 +84,59 @@ function encriptar() {
         prompt_saida.innerText = cesarEncrypt(texto, numero)
     }
     if(aes.checked){
-        prompt_saida.innerText = window.crypto.subtle.encrypt(AES)
+
+        var key = document.getElementById("prompt_auxiliar").value
+
+        for(let i=0; i<3;i++){
+            if(typeAES[i].checked){
+                prompt_saida.innerText =aesEncrypt(texto,key, i)
+                alert(i)
+            }
+        }
+         
     }
+
+    function aesEncrypt(key, data, type) {
+        key = CryptoJS.enc.Utf8.parse(key)
+        const iv = CryptoJS.lib.WordArray.random(16)
+        alert("The IV is: " + iv)
+        let encryptedData
+        let combined
+    
+        if (type === 0) { // CBC Mode
+            encryptedData = CryptoJS.AES.encrypt(data, key, {
+                iv: iv,
+                mode: CryptoJS.mode.CBC,
+                padding: CryptoJS.pad.NoPadding
+            })
+            combined = iv.concat(encryptedData.ciphertext).toString(CryptoJS.enc.Base64)
+    
+        } else if (type === 1) { // CTR Mode
+            encryptedData = CryptoJS.AES.encrypt(data, key, {
+                iv: iv,
+                mode: CryptoJS.mode.CTR,
+                padding: CryptoJS.pad.NoPadding
+            })
+            combined = iv.concat(encryptedData.ciphertext).toString(CryptoJS.enc.Base64)
+    
+        } else if (type === 2) { // GCM Mode
+            encryptedData = CryptoJS.AES.encrypt(data, key, {
+                iv: iv,
+                mode: CryptoJS.mode.GCM,
+                padding: CryptoJS.pad.NoPadding
+            })
+            combined = iv.concat(encryptedData.ciphertext).concat(encryptedData.tag).toString(CryptoJS.enc.Base64)
+    
+        } else {
+            throw new Error("Invalid parameter")
+        }
+    
+        
+        return combined
+    }
+    
+
+
 
     function cesarEncrypt(vetor, escolhido) {
         var fatiar = [tam]

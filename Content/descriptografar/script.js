@@ -44,9 +44,10 @@ async function copyToClipboard() {
                 copy.innerHTML = "copiar"
                 copy.style.color = "#12a525"
             }
-        }, 3000) 
+        },2999) 
     } catch (err) {
         console.error('Erro ao copiar texto: ', err)
+        copy.innerHTML = "Erro!"
     }
 }
 
