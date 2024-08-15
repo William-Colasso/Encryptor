@@ -85,53 +85,56 @@ function encriptar() {
     }
     if(aes.checked){
 
-        var key = document.getElementById("prompt_auxiliar").value
+        var key = String(document.getElementById("prompt_auxiliar").value)
 
-        for(let i=0; i<3;i++){
+        for(let i=0; i<2;i++){
             if(typeAES[i].checked){
                 prompt_saida.innerText =aesEncrypt(texto,key, i)
-                alert(i)
+                
             }
         }
          
     }
 
     function aesEncrypt(key, data, type) {
-        key = CryptoJS.enc.Utf8.parse(key)
+        // Convert key to a WordArray (CryptoJS format) if it’s a string
+        
+        if (typeof key === 'string') {
+            key = CryptoJS.enc.Utf8.parse(key)
+        }
+    
+        // Ensure the key length is valid (128, 192, or 256 bits)
+        const keySize = key.sigBytes * 8
+        if (![128, 192, 256].includes(keySize)) {
+            throw new Error("Invalid key size. Key must be 128, 192, or 256 bits.")
+        }
+    
+        // Generate a 128-bit (16-byte) IV
         const iv = CryptoJS.lib.WordArray.random(16)
-        alert("The IV is: " + iv)
+    
         let encryptedData
         let combined
     
+        // Perform encryption based on the specified mode
         if (type === 0) { // CBC Mode
             encryptedData = CryptoJS.AES.encrypt(data, key, {
                 iv: iv,
                 mode: CryptoJS.mode.CBC,
-                padding: CryptoJS.pad.NoPadding
+                padding: CryptoJS.pad.Pkcs7 // Use Pkcs7 padding to handle block alignment
             })
-            combined = iv.concat(encryptedData.ciphertext).toString(CryptoJS.enc.Base64)
-    
         } else if (type === 1) { // CTR Mode
             encryptedData = CryptoJS.AES.encrypt(data, key, {
                 iv: iv,
                 mode: CryptoJS.mode.CTR,
-                padding: CryptoJS.pad.NoPadding
+                padding: CryptoJS.pad.NoPadding // No padding in CTR mode
             })
-            combined = iv.concat(encryptedData.ciphertext).toString(CryptoJS.enc.Base64)
-    
-        } else if (type === 2) { // GCM Mode
-            encryptedData = CryptoJS.AES.encrypt(data, key, {
-                iv: iv,
-                mode: CryptoJS.mode.GCM,
-                padding: CryptoJS.pad.NoPadding
-            })
-            combined = iv.concat(encryptedData.ciphertext).concat(encryptedData.tag).toString(CryptoJS.enc.Base64)
-    
         } else {
-            throw new Error("Invalid parameter")
+            throw new Error("Invalid parameter. Use 0 for CBC or 1 for CTR.")
         }
     
-        
+        // Combine IV and ciphertext, convert to Base64 for safe transmission/storage
+        combined = iv.concat(encryptedData.ciphertext).toString(CryptoJS.enc.Base64)
+    
         return combined
     }
     
