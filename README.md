@@ -13,4 +13,5 @@ Encryptator é uma aplicação web para criptografia básica. Ele oferece uma in
 
 ## ✍️ Autor
 Nome: Willam Colasso
+
 Email: william.colasso@gmail.com
