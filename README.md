@@ -1,17 +1,17 @@
 # 🛡️ Encryptor
 
 ## Descrição
-Encryptator é uma aplicação web para criptografia básica. Ele oferece uma interface interativa para criptografar e descriptografar mensagens.
+Encryptator is a web application for basic encryption. It offers an interactive interface for encrypting and decrypting messages.
 
 ## Tecnologias Utilizadas
 [![My Skills](https://skillicons.dev/icons?i=html,css,js&theme=dark)](https://skillicons.dev)
 
-## Funcionalidades
-- Criptografia de mensagens usando diferentes algoritmos.
-- Descriptografia de mensagens previamente criptografadas.
-- Interface intuitiva e amigável para uma experiência de usuário agradável.
+## Features
+- Message encryption using different algorithms.
+- Decryption of previously encrypted messages.
+- Intuitive and user-friendly interface for a pleasant user experience.
 
-## ✍️ Autor
-Nome: Willam Colasso
+## ✍️ Author
+Name: Willam Colasso
 
-Email: william.colasso@gmail.com
+E-mail: william.colasso@gmail.com
