@@ -1,9 +1,9 @@
 # 🛡️ Encryptor
 
-## Descrição
+## Description
 Encryptator is a web application for basic encryption. It offers an interactive interface for encrypting and decrypting messages.
 
-## Tecnologias Utilizadas
+## Technologies
 [![My Skills](https://skillicons.dev/icons?i=html,css,js&theme=dark)](https://skillicons.dev)
 
 ## Features
